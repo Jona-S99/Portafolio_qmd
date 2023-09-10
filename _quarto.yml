@@ -1,0 +1,52 @@
+# ---------------------------------------------------- #
+#  Script YAML para crear mi portafolio usando Quarto
+# ---------------------------------------------------- #
+
+# Tipo de proyecto
+project:
+  type: website
+
+
+# Configuraciones generales
+website:
+  title: "Jonatan Salazar"
+  description: "Esto es aa"
+  favicon: ./images/logo_portafolio.png
+
+  # Barra de navegacion
+  navbar:
+    title: false
+    pinned: true
+    logo: ./images/logo_portafolio.png
+    left:
+      - href: index.qmd
+        text: Portafolio
+      - text: Proyectos
+        href: proyectos.qmd
+    right:
+      - icon: code-slash
+        href: https://github.com/
+        aria-label: GitHub
+
+  # Herramienta de busqueda
+  search:
+    location: navbar
+    type: overlay
+
+  # Pie de pagina
+  page-footer:
+    left: |
+      Sitio construido con [![](./images/logo_quarto.png){width=65px}](https://quarto.org)
+
+
+# Estilos
+format:
+  html:
+    theme: solar
+    mainfont: Roboto
+    css: styles.css
+    toc: true
+    toc-title: Índice
+
+
+
