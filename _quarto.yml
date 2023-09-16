@@ -5,6 +5,7 @@
 # Tipo de proyecto
 project:
   type: website
+  output-dir: docs
 
 
 # Configuraciones generales
