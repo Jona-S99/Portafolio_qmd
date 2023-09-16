@@ -25,8 +25,7 @@ website:
         href: proyectos.qmd
     right:
       - icon: code-slash
-        href: https://github.com/
-        aria-label: GitHub
+        href: https://github.com/Jona-S99/Portafolio_qmd/blob/main/index.qmd
 
   # Herramienta de busqueda
   search:
