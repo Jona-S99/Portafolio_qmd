@@ -1,0 +1,111 @@
+/* css styles */
+
+
+
+/* Hero */
+.hero-banner {
+    position: relative;
+    display: flex;
+    justify-content: left;
+  }
+
+
+.hero-banner h1 {
+    color: #ffffff;
+    font-size: 4rem;
+    position: relative;
+  }
+
+.hero-banner h2 {
+    color: #7e8083;
+    font-size: 3rem;
+  }
+
+
+.hero-banner .hero-image {
+    position: absolute;
+    display: none;
+    height: auto;
+}
+
+  
+.hero-banner .content-block .hero-text {
+    color: #7e8083;
+    width: 100%;
+}
+
+
+
+
+
+
+
+/***** Experiencia laboral *****/ 
+.accordion-item {
+  background-color: #2a383b;
+  border: 0px solid #2a383b;
+}
+
+  /* Estilo para el logotipo en el acordeón */
+  .logo-icon {
+    width: 180px; /* Ajusta el ancho según tus necesidades */
+    height: auto; /* Esto permite que la altura se ajuste automáticamente */
+    margin-right: 0px; /* Espacio entre el logotipo y el texto del acordeón */
+  }
+
+.accordion-button:not(.collapsed) {
+    color: #a37b00;
+    background-color: #527076;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+}
+
+
+
+/***** Educación *****/ 
+/* Disminuir el espacio entre el titulo y las tarjetas */
+.py-5 {
+  padding-top: 0rem !important;
+  padding-bottom: 3rem !important;
+}
+
+
+
+/***** Proyectos *****/ 
+
+#projects .card-img-top {
+  transition: transform 5s;
+}
+
+
+/* Márgenes de las tarjetas */
+.my-3 {
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+
+/* Estilo de las tarjetas */
+.card_proyectos {
+  position: relative;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: rgba(238,232,213,.125);
+  background-clip: border-box;
+  border: 1px solid rgb(181, 137, 0);
+  border-radius: 0.40rem;
+}
+
+.card-img-container {
+  overflow: hidden; /* Oculta cualquier contenido que se salga de la tarjeta */
+}
+
+.card-img-top {
+  transition: transform 0.3s; /* Agregamos una transición a la propiedad transform */
+}
+
+.card-img-container:hover .card-img-top {
+  transform: scale(1.3); /* Cuando el mouse está sobre la tarjeta, la imagen hace zoom al 110% */
+}
