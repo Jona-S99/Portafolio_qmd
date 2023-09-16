@@ -31,7 +31,7 @@ about:
 
 ## Sociólogo
 
-Me especializo en metodología cuantitativa, con énfasis en la aplicación de técnicas estadísticas y la vizualicación de datos para el análisis de la realidad social.<br><br>Si quieres saber más de mí, te invito a revisar mi CV o continuar haciendo scroll.
+Me especializo en metodología cuantitativa, con énfasis en la aplicación de técnicas estadísticas y la visualización de datos para el análisis de la realidad social.<br><br>Si quieres saber más de mí, te invito a revisar mi CV o continuar haciendo scroll.
 
 :::::
 
@@ -65,12 +65,20 @@ Me he desempeñado como asistente de investigación, ayudante de cátedra, tesis
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingOne">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-        Dirección de Estudios Sociales UC
+        <img src="./images/logo_desuc.png" alt="Logo" class="logo-icon">
       </button>
     </h2>
     <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExplaboral" style="">
       <div class="accordion-body">
-        AAA
+        <strong>Analista de Datos</strong><br>sep 2022 - actualidad<br><br>
+        <ul>
+        <li>Creación de Dashboards y apoyo en diversos proyectos cuantitativos.</li>  
+        <li>Encuesta Juvenil Comunidades que se Cuidan 2023.</li>
+        <li>Encuesta de Clima Organizacional Fuerza Aérea de Chile 2023.</li>
+        <li>Proyecto recopilación histórica de Encuesta Bicentenario UC.</li>
+        <li>Sociales UC - Estudio diplomados.</li>
+        <li>Encuesta Juvenil Comunidades que se Cuidan 2022.</li>
+      </ul>
     </div>
   </div>
 </div>
@@ -80,7 +88,7 @@ Me he desempeñado como asistente de investigación, ayudante de cátedra, tesis
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingTwo">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-        Datavoz Statcom
+        <img src="https://datavoz.cl/encuestas/wp-content/uploads/2022/04/datavoz-footer.png" alt="Logo" class="logo-icon">
       </button>
     </h2>
     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExplaboral" style="">
@@ -98,7 +106,7 @@ Me he desempeñado como asistente de investigación, ayudante de cátedra, tesis
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingThree">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" >
-        Universidad Diego Portales
+        <img src="https://transformacionessociales.udp.cl/cms/wp-content/uploads/2023/03/logoudp_blanco_footer.png" alt="Logo" class="logo-icon">
       </button>
     </h2>
     <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExplaboral">
@@ -124,6 +132,8 @@ Me he desempeñado como asistente de investigación, ayudante de cátedra, tesis
 <br>
 <br>
 <br>
+
+
 
 ## Educación
 
