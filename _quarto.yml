@@ -13,6 +13,8 @@ website:
   title: "Jonatan Salazar"
   description: "Esto es aa"
   favicon: ./images/logo_portafolio.png
+  repo-url: https://github.com/Jona-S99/Portafolio_qmd
+  repo-actions: [issue]
 
   # Barra de navegacion
   navbar:
@@ -35,8 +37,14 @@ website:
 
   # Pie de pagina
   page-footer:
+    border: true
     left: |
       Sitio construido con [![](./images/logo_quarto.png){width=65px}](https://quarto.org)
+    right: 
+      - icon: linkedin
+        href: https://www.linkedin.com/in/jonatan-salazar-silva-266b54203/
+      - icon: github
+        href: https://github.com/Jona-S99
 
 
 # Estilos
