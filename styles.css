@@ -46,12 +46,12 @@
   border: 0px solid #2a383b;
 }
 
-  /* Estilo para el logotipo en el acordeón */
-  .logo-icon {
+/* Estilo para el logotipo en el acordeón */
+.logo-icon {
     width: 180px; /* Ajusta el ancho según tus necesidades */
     height: auto; /* Esto permite que la altura se ajuste automáticamente */
     margin-right: 0px; /* Espacio entre el logotipo y el texto del acordeón */
-  }
+}
 
 .accordion-button:not(.collapsed) {
     color: #a37b00;
