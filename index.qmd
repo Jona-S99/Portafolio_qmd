@@ -1,0 +1,179 @@
+---
+title: ""
+about:
+    id: hero-heading
+    template: trestles
+    image: ./images/data-analytics.png
+    image-width: 100%
+    links: 
+      - icon: postcard
+        text: Curriculum Vitae
+        href: https://github.com/Jona-S99/CV/blob/main/CV_JONATAN_SALAZAR.pdf
+      - icon: linkedin
+        text: LinkedIn
+        href: https://www.linkedin.com/in/jonatan-salazar-silva-266b54203/
+      - icon: github
+        text: Github
+        href: https://github.com/Jona-S99
+---
+
+:::::::{#hero-heading}
+
+:::::: {.hero-banner}
+
+::::: {.content-block}
+
+:::: {.hero-text}
+¡Hola! Mi nombre es
+::::
+
+# Jonatan Salazar
+
+## Sociólogo
+
+Me especializo en metodología cuantitativa, con énfasis en la aplicación de técnicas estadísticas y la visualización de datos para el análisis de la realidad social.<br><br>Si quieres saber más de mí, te invito a revisar mi CV o continuar haciendo scroll.
+
+:::::
+
+::::::
+
+:::::::
+
+<br>
+<br>
+<br>
+
+## Sobre mí
+
+Me especializo en el trabajo con datos para apoyar los procesos de investigación y toma de decisiones.
+
+Realizo tareas de ETL, análisis y visualización de datos, así como de programación de cuestionarios en plataformas tales como SurveyToGo y Survey Solutions. A su vez, gestiono la transferencia de flujos de información entre los diferentes departamentos en un proceso integral, garantizando la coherencia y la eficiencia en el manejo de datos. 
+
+Desarrollo soluciones innovadoras a través de la programación en R, y orquestaciones de IA con Python para optimizar procesos, costos y fortalecer la capacidad analítica de la organización.
+
+Me interesa seguir profundizando en las soluciones con inteligencia artificial mediante frameworks y el desarrollo de aplicaciones con Python.
+
+<br>
+<br>
+<br>
+
+
+## Experiencia laboral
+
+```{=html}
+<! – DESUC –>
+<div class="accordion" id="accordionExplaboral"> 
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+        <img src="./images/logo_desuc.png" alt="Logo" class="logo-icon">
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExplaboral" style="">
+      <div class="accordion-body">
+        <strong>Analista de Datos</strong><br>sep 2022 - actualidad<br><br>
+        Como el nexo central de datos en DESUC, gestiono el proceso completo de la información, desde la obtención y los procesos ETL hasta el análisis y la visualización. Actúo como el punto de contacto clave para la distribución de datos entre todos los departamentos, equipos de terreno, jefes de proyecto y clientes, garantizando la coherencia y el flujo eficiente de la información.<br><br>
+        Logros y responsabilidades clave:
+        <ul>
+        <li><strong>Orquestación de Datos y Data Science:</strong> Lidero los procesos de ETL, análisis y visualización, transformando datos crudos en insights accionables para la toma de decisiones estratégicas.</li>  
+        <li><strong>Desarrollo de Soluciones de IA:</strong> Diseño y desarrollo orquestaciones con IA Generativa usando Python para automatizar procesos internos clave, mejorando la eficiencia operativa.</li>
+        <li><strong>Optimización de Procesos Analíticos:</strong> Creo funciones y paquetes personalizados en R para estandarizar y acelerar los flujos de trabajo del equipo de análisis de datos.</li>
+        <li><strong>Programación de Instrumentos:</strong> Experto en la programación de cuestionarios y encuestas complejas en plataformas especializadas como SurveyToGo y Survey Solutions.</li>
+        <li><strong>Participación en Proyectos de Alto Impacto:</strong> Desempeñé roles clave en la gestión y análisis de datos para estudios de envergadura nacional, incluyendo la "Encuesta Nacional de Juventudes 2025", la "Encuesta Nacional de Calidad de Vida y Salud" y la "2ª Encuesta Nacional de Polivictimización", asegurando la calidad y el procesamiento eficiente de los datos.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<! – Datavoz –>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+        <img src="https://datavoz.cl/encuestas/wp-content/uploads/2022/04/datavoz-footer.png" alt="Logo" class="logo-icon">
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExplaboral" style="">
+      <div class="accordion-body">
+        <strong>Práctica Profesional - Analista de Datos</strong><br>mar 2022 - jul 2022<br><br>
+        Durante mi práctica profesional estuve a cargo del ‘Proyecto Bookdown D&A’. La generación de tablas y gráficos para el análisis, como también la automatización de reportes estadísticos y procesos internos.<br><br>
+
+        <a href="https://jona-s99.github.io/Bookdown/" target="_blank" class="btn btn-primary">Bookdown D&A</a>
+      </div>
+    </div>
+  </div>
+
+
+<! – UDP –>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" >
+        <img src="https://transformacionessociales.udp.cl/cms/wp-content/uploads/2023/03/logoudp_blanco_footer.png" alt="Logo" class="logo-icon">
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExplaboral">
+      <div class="accordion-body">
+        <strong>Ayudante de Cátedra en diversos cursos de pregrado</strong><br>
+        2019 - 2022<br><br>
+
+        <ul>
+        <li><strong>Estadística II:</strong> dictado por la profesora Mg. Berta Teitelboim Grinblatt.</li>
+        <li><strong>Análisis Avanzado de Datos I:</strong> dictado por la profesora Mg. Berta Teitelboim Grinblatt.</li>
+        <li><strong>Políticas Públicas:</strong> dictado por la profesora Dra. María Angélica Pavez</li>
+        <li><strong>Procesos Sociales II, Chile:</strong> dictado por el profesor Eduardo Godoy Sepúlveda</li>
+      </ul>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+
+
+
+<br>
+<br>
+<br>
+
+
+
+## Educación
+
+```{=html}
+<section id="education" class="education-section" aria-labelledby="education-heading">
+  
+  
+  <ul class="education-list">
+    <li>
+      <article class="education-item" aria-labelledby="edu-1">
+        <div class="education-main">
+          <h3 id="edu-1" class="degree">Diplomado en Inteligencia Artificial Generativa</h3>
+          <p class="institution">Pontificia Universidad Católica de Chile — Santiago, Chile</p>
+        </div>
+        <time class="period" datetime="2018-2022">2025 — 2026</time>
+      </article>
+    </li>
+
+    <li>
+      <article class="education-item" aria-labelledby="edu-1">
+        <div class="education-main">
+          <h3 id="edu-1" class="degree">Sociólogo</h3>
+          <p class="institution">Universidad Diego Portales — Santiago, Chile</p>
+        </div>
+        <time class="period" datetime="2018-2022">2018 — 2022</time>
+      </article>
+    </li>
+
+    <li>
+      <article class="education-item" aria-labelledby="edu-2">
+        <div class="education-main">
+          <h3 id="edu-2" class="degree">Diploma de Honor en Historia de las Ideas Políticas en Chile</h3>
+          <p class="institution">Universidad Diego Portales — Santiago, Chile</p>
+        </div>
+        <time class="period" datetime="2020">2020</time>
+      </article>
+    </li>
+  </ul>
+</section>
+```
+
