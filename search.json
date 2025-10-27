@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "proyectos.html",
+    "href": "proyectos.html",
+    "title": "Proyectos",
+    "section": "",
+    "text": "Python, IA\n\n      Centro de apuntes\n\n      \n        Libro electrónico donde voy registrando los apuntes de los cursos que voy haciendo.\n      \n\n      \n        Ver apuntes\n      \n    \n  \n\n  \n    \n      \n    \n\n    \n      R\n\n      Bookdown D&A\n\n      \n        Libro electrónico con herramientas y automatizaciones en R desarrolladas para Datavoz. Proyecto de práctica profesional para el título de Sociólogo (UDP).\n      \n\n      \n        Libro\n      \n    \n  \n\n  \n    \n      \n    \n\n    \n      Investigación\n\n      Soberanía alimentaria: los alimentos en el proyecto de la autodeterminación popular\n\n      \n        Investigación cualitativa del proyecto Fondecyt N°11180099 (dir. Martín Arboleda). Recoge la perspectiva de organizaciones de base sobre problemas y soluciones en los sistemas agroalimentarios.\n      \n\n      \n        Publicación"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Jonatan Salazar",
+    "section": "",
+    "text": "Curriculum Vitae\n  \n  \n    \n     LinkedIn\n  \n  \n    \n     Github\n  \n\n  \n  \n\n\n\n¡Hola! Mi nombre es\n\n\n\n\n\nMe especializo en metodología cuantitativa, con énfasis en la aplicación de técnicas estadísticas y la visualización de datos para el análisis de la realidad social.Si quieres saber más de mí, te invito a revisar mi CV o continuar haciendo scroll."
+  },
+  {
+    "objectID": "index.html#sociólogo",
+    "href": "index.html#sociólogo",
+    "title": "Jonatan Salazar",
+    "section": "",
+    "text": "Me especializo en metodología cuantitativa, con énfasis en la aplicación de técnicas estadísticas y la visualización de datos para el análisis de la realidad social.Si quieres saber más de mí, te invito a revisar mi CV o continuar haciendo scroll."
+  },
+  {
+    "objectID": "index.html#sobre-mí",
+    "href": "index.html#sobre-mí",
+    "title": "Jonatan Salazar",
+    "section": "Sobre mí",
+    "text": "Sobre mí\nMe especializo en el trabajo con datos para apoyar los procesos de investigación y toma de decisiones.\nRealizo tareas de ETL, análisis y visualización de datos, así como de programación de cuestionarios en plataformas tales como SurveyToGo y Survey Solutions. A su vez, gestiono la transferencia de flujos de información entre los diferentes departamentos en un proceso integral, garantizando la coherencia y la eficiencia en el manejo de datos.\nDesarrollo soluciones innovadoras a través de la programación en R, y orquestaciones de IA con Python para optimizar procesos, costos y fortalecer la capacidad analítica de la organización.\nMe interesa seguir profundizando en las soluciones con inteligencia artificial mediante frameworks y el desarrollo de aplicaciones con Python."
+  },
+  {
+    "objectID": "index.html#experiencia-laboral",
+    "href": "index.html#experiencia-laboral",
+    "title": "Jonatan Salazar",
+    "section": "Experiencia laboral",
+    "text": "Experiencia laboral\n\n \n  \n    \n      \n        \n      \n    \n    \n      \n        Analista de Datossep 2022 - actualidad\n        Como el nexo central de datos en DESUC, gestiono el proceso completo de la información, desde la obtención y los procesos ETL hasta el análisis y la visualización. Actúo como el punto de contacto clave para la distribución de datos entre todos los departamentos, equipos de terreno, jefes de proyecto y clientes, garantizando la coherencia y el flujo eficiente de la información.\n        Logros y responsabilidades clave:\n        \n        Orquestación de Datos y Data Science: Lidero los procesos de ETL, análisis y visualización, transformando datos crudos en insights accionables para la toma de decisiones estratégicas.  \n        Desarrollo de Soluciones de IA: Diseño y desarrollo orquestaciones con IA Generativa usando Python para automatizar procesos internos clave, mejorando la eficiencia operativa.\n        Optimización de Procesos Analíticos: Creo funciones y paquetes personalizados en R para estandarizar y acelerar los flujos de trabajo del equipo de análisis de datos.\n        Programación de Instrumentos: Experto en la programación de cuestionarios y encuestas complejas en plataformas especializadas como SurveyToGo y Survey Solutions.\n        Participación en Proyectos de Alto Impacto: Desempeñé roles clave en la gestión y análisis de datos para estudios de envergadura nacional, incluyendo la \"Encuesta Nacional de Juventudes 2025\", la \"Encuesta Nacional de Calidad de Vida y Salud\" y la \"2ª Encuesta Nacional de Polivictimización\", asegurando la calidad y el procesamiento eficiente de los datos.\n      \n    \n  \n\n\n\n\n  \n    \n      \n        \n      \n    \n    \n      \n        Práctica Profesional - Analista de Datosmar 2022 - jul 2022\n        Durante mi práctica profesional estuve a cargo del ‘Proyecto Bookdown D&A’. La generación de tablas y gráficos para el análisis, como también la automatización de reportes estadísticos y procesos internos.\n\n        Bookdown D&A\n      \n    \n  \n\n\n\n  \n    \n      \n        \n      \n    \n    \n      \n        Ayudante de Cátedra en diversos cursos de pregrado\n        2019 - 2022\n\n        \n        Estadística II: dictado por la profesora Mg. Berta Teitelboim Grinblatt.\n        Análisis Avanzado de Datos I: dictado por la profesora Mg. Berta Teitelboim Grinblatt.\n        Políticas Públicas: dictado por la profesora Dra. María Angélica Pavez\n        Procesos Sociales II, Chile: dictado por el profesor Eduardo Godoy Sepúlveda"
+  },
+  {
+    "objectID": "index.html#educación",
+    "href": "index.html#educación",
+    "title": "Jonatan Salazar",
+    "section": "Educación",
+    "text": "Educación\n\n  \n  \n  \n    \n      \n        \n          Diplomado en Inteligencia Artificial Generativa\n          Pontificia Universidad Católica de Chile — Santiago, Chile\n        \n        2025 — 2026\n      \n    \n\n    \n      \n        \n          Sociólogo\n          Universidad Diego Portales — Santiago, Chile\n        \n        2018 — 2022\n      \n    \n\n    \n      \n        \n          Diploma de Honor en Historia de las Ideas Políticas en Chile\n          Universidad Diego Portales — Santiago, Chile\n        \n        2020"
+  }
+]
