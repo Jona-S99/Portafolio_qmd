@@ -6,6 +6,8 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - files/
 
 
 # Configuraciones generales
@@ -39,7 +41,7 @@ website:
   page-footer:
     border: true
     left: |
-      Sitio construido con [![](./images/logo_quarto.png){width=65px}](https://quarto.org)
+      Sitio construido con [![](/images/logo_quarto.png){width=65px}](https://quarto.org)
     right: 
       - icon: linkedin
         href: https://www.linkedin.com/in/jonatan-salazar-silva-266b54203/
@@ -50,11 +52,12 @@ website:
 # Estilos
 format:
   html:
-    theme: solar
+    theme:
+      light: sandstone
+      dark: darkly
     mainfont: Roboto
-    css: styles.css
+    css:
+      - styles.css
+      - styles_dark.css
     toc: true
     toc-title: Índice
-
-
-
