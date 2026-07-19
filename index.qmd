@@ -8,7 +8,7 @@ about:
     links: 
       - icon: postcard
         text: Curriculum Vitae
-        href: "/files/CV-Jonatan Salazar.pdf"
+        href: "https://jona-s99.github.io/Portafolio_qmd/files/CV-Jonatan%20Salazar.pdf"
         target: _blank
         rel: noopener noreferrer
       - icon: linkedin
