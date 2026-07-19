@@ -1,0 +1,417 @@
+/*
+ * Tema oscuro del portafolio
+ *
+ * Quarto añade la clase `.quarto-dark` al <body> cuando el usuario activa
+ * el modo oscuro. Todos los estilos están contenidos bajo esa clase para
+ * mantener el tema claro completamente independiente.
+ */
+
+/* Sistema de color */
+body.quarto-dark {
+  /* Fondos y superficies */
+  --page-bg: #171411;
+  --surface-bg: #211c18;
+  --surface-muted: #2b241f;
+  --surface-hover: #382a22;
+
+  /* Texto */
+  --text-primary: #f2ebe4;
+  --text-secondary: #c8bab0;
+  --text-inverse: #1b1512;
+
+  /* Marca e interacción */
+  --accent: #dfa77f;
+  --accent-hover: #f0c3a2;
+  --accent-soft: #4b3328;
+  --accent-border: #91644d;
+  --focus-ring: rgba(223, 167, 127, 0.32);
+
+  /* Estructura */
+  --border-soft: #493e37;
+  --footer-bg: #1d1916;
+  --shadow-soft: 0 14px 34px rgba(0, 0, 0, 0.26);
+
+  /* Bootstrap y componentes generados por Quarto */
+  --bs-body-color: var(--text-primary);
+  --bs-body-color-rgb: 242, 235, 228;
+  --bs-body-bg: var(--page-bg);
+  --bs-body-bg-rgb: 23, 20, 17;
+  --bs-primary: var(--accent);
+  --bs-primary-rgb: 223, 167, 127;
+  --bs-success: var(--accent);
+  --bs-success-rgb: 223, 167, 127;
+  --bs-link-color: var(--accent);
+  --bs-link-color-rgb: 223, 167, 127;
+  --bs-link-hover-color: var(--accent-hover);
+  --bs-link-hover-color-rgb: 240, 195, 162;
+  --bs-border-color: var(--border-soft);
+  --bs-emphasis-color: var(--text-primary);
+  --bs-emphasis-color-rgb: 242, 235, 228;
+  --bs-secondary-color: var(--text-secondary);
+  --bs-tertiary-bg: var(--surface-muted);
+  --bs-focus-ring-color: var(--focus-ring);
+
+  background-color: var(--page-bg);
+  color: var(--text-primary);
+  color-scheme: dark;
+}
+
+html:has(body.quarto-dark) {
+  background-color: #171411;
+}
+
+body.quarto-dark ::selection {
+  background: var(--accent-soft);
+  color: var(--text-primary);
+}
+
+/* Tipografía y contenido */
+body.quarto-dark p,
+body.quarto-dark li,
+body.quarto-dark dt,
+body.quarto-dark dd,
+body.quarto-dark figcaption,
+body.quarto-dark .figure-caption {
+  color: var(--text-primary);
+}
+
+body.quarto-dark h1,
+body.quarto-dark h2,
+body.quarto-dark h3,
+body.quarto-dark h4,
+body.quarto-dark h5,
+body.quarto-dark h6,
+body.quarto-dark .quarto-title {
+  color: var(--text-primary);
+}
+
+body.quarto-dark a {
+  color: var(--accent);
+  text-decoration-color: var(--accent-border);
+}
+
+body.quarto-dark a:hover,
+body.quarto-dark a:focus {
+  color: var(--accent-hover);
+  text-decoration-color: currentColor;
+}
+
+body.quarto-dark a:focus-visible,
+body.quarto-dark button:focus-visible,
+body.quarto-dark [role="button"]:focus-visible,
+body.quarto-dark input:focus-visible {
+  outline-color: var(--accent);
+}
+
+body.quarto-dark hr {
+  border-color: var(--border-soft);
+}
+
+body.quarto-dark blockquote {
+  border-left-color: var(--accent-border);
+  color: var(--text-secondary);
+}
+
+/* Navegación y selector de tema */
+body.quarto-dark .navbar,
+body.quarto-dark #quarto-header .navbar {
+  --bs-navbar-color: var(--text-primary);
+  --bs-navbar-hover-color: var(--accent);
+  --bs-navbar-active-color: var(--accent-hover);
+  --bs-navbar-brand-color: var(--text-primary);
+  --bs-navbar-brand-hover-color: var(--accent);
+  --bs-navbar-toggler-border-color: var(--border-soft);
+  background-color: rgba(23, 20, 17, 0.96);
+  border-bottom-color: var(--border-soft);
+  box-shadow: 0 5px 22px rgba(0, 0, 0, 0.24);
+  color-scheme: dark;
+}
+
+body.quarto-dark .navbar a,
+body.quarto-dark .navbar .nav-link,
+body.quarto-dark .navbar .navbar-brand,
+body.quarto-dark .navbar .quarto-navigation-tool,
+body.quarto-dark .navbar #quarto-search,
+body.quarto-dark .navbar #quarto-search svg,
+body.quarto-dark .quarto-color-scheme-toggle {
+  color: var(--text-primary);
+}
+
+body.quarto-dark .navbar .nav-link:hover,
+body.quarto-dark .navbar .nav-link:focus,
+body.quarto-dark .navbar .nav-link.active,
+body.quarto-dark .navbar .quarto-navigation-tool:hover,
+body.quarto-dark .navbar .quarto-navigation-tool:focus,
+body.quarto-dark .quarto-color-scheme-toggle:hover,
+body.quarto-dark .quarto-color-scheme-toggle:focus {
+  color: var(--accent-hover);
+}
+
+body.quarto-dark .navbar-toggler {
+  border-color: var(--border-soft);
+  color: var(--text-primary);
+}
+
+body.quarto-dark .navbar-toggler:hover {
+  background: var(--surface-hover);
+}
+
+body.quarto-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23f2ebe4' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Búsqueda */
+body.quarto-dark #quarto-search .aa-DetachedSearchButton,
+body.quarto-dark #quarto-search .aa-DetachedSearchButtonIcon,
+body.quarto-dark #quarto-search .aa-DetachedSearchButtonIcon svg,
+body.quarto-dark #quarto-search .aa-DetachedSearchButtonIcon svg * {
+  color: var(--text-primary) !important;
+  stroke: currentColor !important;
+}
+
+body.quarto-dark #quarto-search:hover .aa-DetachedSearchButtonIcon,
+body.quarto-dark #quarto-search:focus-within .aa-DetachedSearchButtonIcon {
+  color: var(--accent-hover) !important;
+}
+
+body.quarto-dark .aa-DetachedOverlay,
+body.quarto-dark .aa-Panel,
+body.quarto-dark .aa-DetachedContainer,
+body.quarto-dark .aa-Form,
+body.quarto-dark .search-result-container {
+  background-color: var(--surface-bg) !important;
+  color: var(--text-primary) !important;
+}
+
+body.quarto-dark .aa-Form,
+body.quarto-dark .aa-InputWrapperPrefix,
+body.quarto-dark .aa-DetachedSearchButton {
+  border-color: var(--border-soft) !important;
+}
+
+body.quarto-dark .aa-Input,
+body.quarto-dark .aa-Input::placeholder,
+body.quarto-dark .aa-Label svg,
+body.quarto-dark .aa-ClearButton,
+body.quarto-dark .aa-DetachedCancelButton {
+  color: var(--text-secondary) !important;
+}
+
+body.quarto-dark .aa-Item[aria-selected="true"],
+body.quarto-dark .search-result-more:hover {
+  background-color: var(--surface-hover) !important;
+}
+
+/* Botones y enlaces destacados */
+body.quarto-dark .btn-primary {
+  --bs-btn-color: var(--text-inverse);
+  --bs-btn-bg: var(--accent);
+  --bs-btn-border-color: var(--accent);
+  --bs-btn-hover-color: var(--text-inverse);
+  --bs-btn-hover-bg: var(--accent-hover);
+  --bs-btn-hover-border-color: var(--accent-hover);
+  --bs-btn-active-color: var(--text-inverse);
+  --bs-btn-active-bg: var(--accent-hover);
+  --bs-btn-active-border-color: var(--accent-hover);
+  --bs-btn-focus-shadow-rgb: 223, 167, 127;
+}
+
+body.quarto-dark .about-link {
+  background: var(--surface-bg);
+  border-color: var(--accent-border);
+  color: var(--accent);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+body.quarto-dark .about-link:hover,
+body.quarto-dark .about-link:focus {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--text-inverse);
+}
+
+/* Presentación */
+body.quarto-dark .hero-banner h1 {
+  color: var(--text-primary);
+}
+
+body.quarto-dark .hero-banner h2 {
+  color: var(--accent);
+}
+
+body.quarto-dark .hero-banner .content-block .hero-text {
+  color: var(--text-secondary);
+}
+
+/* Experiencia laboral */
+body.quarto-dark .accordion {
+  --bs-accordion-color: var(--text-primary);
+  --bs-accordion-bg: var(--surface-bg);
+  --bs-accordion-border-color: var(--border-soft);
+  --bs-accordion-btn-color: var(--text-primary);
+  --bs-accordion-btn-bg: var(--surface-bg);
+  --bs-accordion-active-color: var(--text-primary);
+  --bs-accordion-active-bg: var(--surface-hover);
+  --bs-accordion-btn-focus-border-color: var(--accent-border);
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.2rem var(--focus-ring);
+}
+
+body.quarto-dark .accordion-item,
+body.quarto-dark .accordion-button,
+body.quarto-dark .accordion-button.collapsed,
+body.quarto-dark .accordion-button:not(.collapsed) {
+  background-color: var(--surface-bg);
+  border-color: var(--border-soft);
+  color: var(--text-primary);
+}
+
+body.quarto-dark .accordion-button:hover,
+body.quarto-dark .accordion-button:not(.collapsed) {
+  background-color: var(--surface-hover);
+}
+
+body.quarto-dark .accordion-button::after {
+  filter: invert(76%) sepia(28%) saturate(646%) hue-rotate(338deg)
+    brightness(96%) contrast(91%);
+}
+
+body.quarto-dark .logo-in-dark-badge {
+  background-color: #6d4532;
+  border: 1px solid var(--accent-border);
+}
+
+/* Educación */
+body.quarto-dark .education-item {
+  background: var(--surface-bg);
+  border-color: var(--border-soft);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+}
+
+body.quarto-dark .degree {
+  color: var(--text-primary);
+}
+
+body.quarto-dark .institution,
+body.quarto-dark .period {
+  color: var(--text-secondary);
+}
+
+/* Listado y páginas de proyectos */
+body.quarto-dark .quarto-listing-default .quarto-post {
+  border-bottom-color: var(--border-soft);
+}
+
+body.quarto-dark .quarto-listing-default .listing-title,
+body.quarto-dark .quarto-listing-default .listing-title a {
+  color: var(--text-primary);
+}
+
+body.quarto-dark .quarto-listing-default .listing-title a:hover,
+body.quarto-dark .quarto-listing-default .listing-title a:focus {
+  color: var(--accent-hover);
+}
+
+body.quarto-dark .listing-description,
+body.quarto-dark .listing-description a,
+body.quarto-dark .listing-date,
+body.quarto-dark .quarto-title-meta-heading,
+body.quarto-dark .quarto-title-meta-contents {
+  color: var(--text-secondary);
+}
+
+body.quarto-dark .listing-category,
+body.quarto-dark .quarto-category {
+  background: var(--accent-soft);
+  border-color: var(--accent-border) !important;
+  color: var(--accent-hover) !important;
+}
+
+body.quarto-dark .listing-category:hover,
+body.quarto-dark .listing-category:focus {
+  background: var(--accent);
+  border-color: var(--accent) !important;
+  color: var(--text-inverse) !important;
+}
+
+body.quarto-dark .quarto-listing-category .category {
+  color: var(--text-secondary);
+}
+
+body.quarto-dark .quarto-listing-category .category:hover,
+body.quarto-dark .quarto-listing-category .category:focus {
+  color: var(--accent-hover);
+}
+
+body.quarto-dark .card_proyectos {
+  background-color: var(--surface-bg);
+  border-color: var(--border-soft);
+  color: var(--text-primary);
+}
+
+body.quarto-dark iframe {
+  background: var(--surface-bg);
+  border-color: var(--border-soft) !important;
+}
+
+/* Índice lateral */
+body.quarto-dark #TOC,
+body.quarto-dark .sidebar nav[role="doc-toc"] {
+  color: var(--text-secondary);
+}
+
+body.quarto-dark #TOC .nav-link,
+body.quarto-dark .toc-actions a {
+  border-left-color: var(--border-soft);
+  color: var(--text-secondary);
+}
+
+body.quarto-dark #TOC .nav-link.active,
+body.quarto-dark #TOC .nav-link:hover,
+body.quarto-dark #TOC .nav-link:focus,
+body.quarto-dark .toc-actions a:hover,
+body.quarto-dark .toc-actions a:focus,
+body.quarto-dark .sidebar nav[role="doc-toc"] a.nav-link.active {
+  border-left-color: var(--accent) !important;
+  color: var(--accent) !important;
+}
+
+/* Código y tablas */
+body.quarto-dark code:not(pre code) {
+  background-color: var(--surface-muted);
+  color: var(--accent-hover);
+}
+
+body.quarto-dark pre,
+body.quarto-dark div.sourceCode {
+  background-color: #1d1916;
+  border-color: var(--border-soft);
+  color: var(--text-primary);
+}
+
+body.quarto-dark table,
+body.quarto-dark .table {
+  --bs-table-color: var(--text-primary);
+  --bs-table-bg: transparent;
+  --bs-table-border-color: var(--border-soft);
+  color: var(--text-primary);
+}
+
+/* Pie de página */
+body.quarto-dark .footer,
+body.quarto-dark .nav-footer {
+  background-color: var(--footer-bg);
+  border-top-color: var(--border-soft);
+  color: var(--text-secondary);
+}
+
+body.quarto-dark .nav-footer a,
+body.quarto-dark .footer .nav-link {
+  color: var(--text-primary);
+}
+
+body.quarto-dark .nav-footer a:hover,
+body.quarto-dark .nav-footer a:focus,
+body.quarto-dark .footer .nav-link:hover,
+body.quarto-dark .footer .nav-link:focus {
+  color: var(--accent-hover);
+}

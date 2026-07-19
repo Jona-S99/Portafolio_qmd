@@ -1,19 +1,5 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "proyectos.html",
-    "href": "proyectos.html",
-    "title": "Proyectos",
-    "section": "",
-    "text": "Python, IA\n\n      Centro de apuntes\n\n      \n        Libro electrónico donde voy registrando los apuntes de los cursos que voy haciendo.\n      \n\n      \n        Ver apuntes\n      \n    \n  \n\n  \n    \n      \n    \n\n    \n      R\n\n      Bookdown D&A\n\n      \n        Libro electrónico con herramientas y automatizaciones en R desarrolladas para Datavoz. Proyecto de práctica profesional para el título de Sociólogo (UDP).\n      \n\n      \n        Libro\n      \n    \n  \n\n  \n    \n      \n    \n\n    \n      Investigación\n\n      Soberanía alimentaria: los alimentos en el proyecto de la autodeterminación popular\n\n      \n        Investigación cualitativa del proyecto Fondecyt N°11180099 (dir. Martín Arboleda). Recoge la perspectiva de organizaciones de base sobre problemas y soluciones en los sistemas agroalimentarios.\n      \n\n      \n        Publicación"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Jonatan Salazar",
@@ -39,7 +25,7 @@
     "href": "index.html#experiencia-laboral",
     "title": "Jonatan Salazar",
     "section": "Experiencia laboral",
-    "text": "Experiencia laboral\n\n \n  \n    \n      \n        \n      \n    \n    \n      \n        Analista de Datossep 2022 - actualidad\n        Como el nexo central de datos en DESUC, gestiono el proceso completo de la información, desde la obtención y los procesos ETL hasta el análisis y la visualización. Actúo como el punto de contacto clave para la distribución de datos entre todos los departamentos, equipos de terreno, jefes de proyecto y clientes, garantizando la coherencia y el flujo eficiente de la información.\n        Logros y responsabilidades clave:\n        \n        Orquestación de Datos y Data Science: Lidero los procesos de ETL, análisis y visualización, transformando datos crudos en insights accionables para la toma de decisiones estratégicas.  \n        Desarrollo de Soluciones de IA: Diseño y desarrollo orquestaciones con IA Generativa usando Python para automatizar procesos internos clave, mejorando la eficiencia operativa.\n        Optimización de Procesos Analíticos: Creo funciones y paquetes personalizados en R para estandarizar y acelerar los flujos de trabajo del equipo de análisis de datos.\n        Programación de Instrumentos: Experto en la programación de cuestionarios y encuestas complejas en plataformas especializadas como SurveyToGo y Survey Solutions.\n        Participación en Proyectos de Alto Impacto: Desempeñé roles clave en la gestión y análisis de datos para estudios de envergadura nacional, incluyendo la \"Encuesta Nacional de Juventudes 2025\", la \"Encuesta Nacional de Calidad de Vida y Salud\" y la \"2ª Encuesta Nacional de Polivictimización\", asegurando la calidad y el procesamiento eficiente de los datos.\n      \n    \n  \n\n\n\n\n  \n    \n      \n        \n      \n    \n    \n      \n        Práctica Profesional - Analista de Datosmar 2022 - jul 2022\n        Durante mi práctica profesional estuve a cargo del ‘Proyecto Bookdown D&A’. La generación de tablas y gráficos para el análisis, como también la automatización de reportes estadísticos y procesos internos.\n\n        Bookdown D&A\n      \n    \n  \n\n\n\n  \n    \n      \n        \n      \n    \n    \n      \n        Ayudante de Cátedra en diversos cursos de pregrado\n        2019 - 2022\n\n        \n        Estadística II: dictado por la profesora Mg. Berta Teitelboim Grinblatt.\n        Análisis Avanzado de Datos I: dictado por la profesora Mg. Berta Teitelboim Grinblatt.\n        Políticas Públicas: dictado por la profesora Dra. María Angélica Pavez\n        Procesos Sociales II, Chile: dictado por el profesor Eduardo Godoy Sepúlveda"
+    "text": "Experiencia laboral\n\n \n  \n    \n      \n        \n          \n        \n      \n    \n    \n      \n        Analista de Datossep 2022 - actualidad\n        Como el nexo central de datos en DESUC, gestiono el proceso completo de la información, desde la obtención y los procesos ETL hasta el análisis y la visualización. Actúo como el punto de contacto clave para la distribución de datos entre todos los departamentos, equipos de terreno, jefes de proyecto y clientes, garantizando la coherencia y el flujo eficiente de la información.\n        Logros y responsabilidades clave:\n        \n        Orquestación de Datos y Data Science: Lidero los procesos de ETL, análisis y visualización, transformando datos crudos en insights accionables para la toma de decisiones estratégicas.  \n        Desarrollo de Soluciones de IA: Diseño y desarrollo orquestaciones con IA Generativa usando Python para automatizar procesos internos clave, mejorando la eficiencia operativa.\n        Optimización de Procesos Analíticos: Creo funciones y paquetes personalizados en R para estandarizar y acelerar los flujos de trabajo del equipo de análisis de datos.\n        Programación de Instrumentos: Experto en la programación de cuestionarios y encuestas complejas en plataformas especializadas como SurveyToGo y Survey Solutions.\n        Participación en Proyectos de Alto Impacto: Desempeñé roles clave en la gestión y análisis de datos para estudios de envergadura nacional, incluyendo la \"Encuesta Nacional de Juventudes 2025\", la \"Encuesta Nacional de Calidad de Vida y Salud\" y la \"2ª Encuesta Nacional de Polivictimización\", asegurando la calidad y el procesamiento eficiente de los datos.\n      \n    \n  \n\n\n\n\n  \n    \n      \n        \n          \n        \n      \n    \n    \n      \n        Práctica Profesional - Analista de Datosmar 2022 - jul 2022\n        Durante mi práctica profesional estuve a cargo del ‘Proyecto Bookdown D&A’. La generación de tablas y gráficos para el análisis, como también la automatización de reportes estadísticos y procesos internos.\n\n        Bookdown D&A\n      \n    \n  \n\n\n\n  \n    \n      \n        \n          \n        \n      \n    \n    \n      \n        Ayudante de Cátedra en diversos cursos de pregrado\n        2019 - 2022\n\n        \n        Estadística II: dictado por la profesora Mg. Berta Teitelboim Grinblatt.\n        Análisis Avanzado de Datos I: dictado por la profesora Mg. Berta Teitelboim Grinblatt.\n        Políticas Públicas: dictado por la profesora Dra. María Angélica Pavez\n        Procesos Sociales II, Chile: dictado por el profesor Eduardo Godoy Sepúlveda"
   },
   {
     "objectID": "index.html#educación",
@@ -47,5 +33,61 @@
     "title": "Jonatan Salazar",
     "section": "Educación",
     "text": "Educación\n\n  \n  \n  \n    \n      \n        \n          Diplomado en Inteligencia Artificial Generativa\n          Pontificia Universidad Católica de Chile — Santiago, Chile\n        \n        2025 — 2026\n      \n    \n\n    \n      \n        \n          Sociólogo\n          Universidad Diego Portales — Santiago, Chile\n        \n        2018 — 2022\n      \n    \n\n    \n      \n        \n          Diploma de Honor en Historia de las Ideas Políticas en Chile\n          Universidad Diego Portales — Santiago, Chile\n        \n        2020"
+  },
+  {
+    "objectID": "proyectos/book_da.html",
+    "href": "proyectos/book_da.html",
+    "title": "Bookdown D&A",
+    "section": "",
+    "text": "Libro electrónico con herramientas y automatizaciones en R desarrolladas para Datavoz. Este proyecto fue realizado en el contexto de mi práctica profesional para optar al título de Sociólogo en la Universidad Diego Portales.\nEl objetivo del libro fue reunir, documentar y dejar disponibles para el equipo distintas soluciones de uso cotidiano en análisis de datos, de modo que el conocimiento técnico no quedara disperso entre scripts aislados, sino organizado en un recurso consultable, replicable y útil para el trabajo colaborativo.\nClick aquí para ver el libro"
+  },
+  {
+    "objectID": "proyectos/book_da.html#descripción",
+    "href": "proyectos/book_da.html#descripción",
+    "title": "Bookdown D&A",
+    "section": "",
+    "text": "Libro electrónico con herramientas y automatizaciones en R desarrolladas para Datavoz. Este proyecto fue realizado en el contexto de mi práctica profesional para optar al título de Sociólogo en la Universidad Diego Portales.\nEl objetivo del libro fue reunir, documentar y dejar disponibles para el equipo distintas soluciones de uso cotidiano en análisis de datos, de modo que el conocimiento técnico no quedara disperso entre scripts aislados, sino organizado en un recurso consultable, replicable y útil para el trabajo colaborativo.\nClick aquí para ver el libro"
+  },
+  {
+    "objectID": "proyectos/book_da.html#características-generales",
+    "href": "proyectos/book_da.html#características-generales",
+    "title": "Bookdown D&A",
+    "section": "Características generales",
+    "text": "Características generales\n\nDocumenté operaciones frecuentes de procesamiento de bases de datos en R, incluyendo recodificación, selección, filtrado, transformación de estructuras y uso de funciones personalizadas.\nIntegra automatizaciones aplicadas a tareas reales del equipo, como tabulaciones de frecuencia, diferencia de medias y exportación de resultados a Excel.\nReúne procedimientos metodológicos de uso profesional, como mallas de validación, construcción de ponderadores por raking y clasificación por nivel socioeconómico.\nIncluye una sección orientada a R Markdown y reportes automáticos, mostrando cómo transformar análisis y monitoreo operativo en documentos reproducibles.\nEstá pensado como un recurso colaborativo para analistas, con una estructura que facilita agregar nuevos capítulos, ampliar funciones existentes y mantener estándares comunes de trabajo."
+  },
+  {
+    "objectID": "proyectos/book_da.html#habilidades-que-muestra-este-proyecto",
+    "href": "proyectos/book_da.html#habilidades-que-muestra-este-proyecto",
+    "title": "Bookdown D&A",
+    "section": "Habilidades que muestra este proyecto",
+    "text": "Habilidades que muestra este proyecto\nEste proyecto refleja mi capacidad para documentar procesos técnicos de forma clara, convertir tareas repetitivas en flujos automatizados y desarrollar herramientas en R pensadas para ser reutilizadas por otras personas."
+  },
+  {
+    "objectID": "proyectos.html",
+    "href": "proyectos.html",
+    "title": "Proyectos",
+    "section": "",
+    "text": "Bookdown D&A\n\n\n\nR\n\nAutomatización\n\nDocumentación\n\nBookdown\n\n\n\nLibro electrónico con herramientas y automatizaciones en R desarrolladas para Datavoz.\n\n\n\n\n\nJul 1, 2022\n\n\n\n\n\n\n\n\n\n\n\n\nSoberanía alimentaria: los alimentos en el proyecto de la autodeterminación popular\n\n\n\nInvestigación\n\nSociología\n\nCualitativa\n\n\n\nInvestigación cualitativa del proyecto Fondecyt N°11180099 (dir. Martín Arboleda). Recoge la perspectiva de organizaciones de base sobre problemas y soluciones en los sistemas agroalimentarios.\n\n\n\n\n\nSep 28, 2020\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "proyectos/sob_alimentaria.html",
+    "href": "proyectos/sob_alimentaria.html",
+    "title": "Soberanía alimentaria: los alimentos en el proyecto de la autodeterminación popular",
+    "section": "",
+    "text": "Investigación cualitativa del proyecto Fondecyt N°11180099, dirigido por Martín Arboleda. El trabajo recoge la perspectiva de organizaciones de base sobre los principales problemas y posibles soluciones en los sistemas agroalimentarios.\nEn este proyecto participé activamente en las discusiones metodológicas, en la búsqueda de organizaciones y en la aplicación de entrevistas, aportando al desarrollo del trabajo de campo y a la construcción del enfoque de investigación.\nVer publicación original"
+  },
+  {
+    "objectID": "proyectos/sob_alimentaria.html#descripción",
+    "href": "proyectos/sob_alimentaria.html#descripción",
+    "title": "Soberanía alimentaria: los alimentos en el proyecto de la autodeterminación popular",
+    "section": "",
+    "text": "Investigación cualitativa del proyecto Fondecyt N°11180099, dirigido por Martín Arboleda. El trabajo recoge la perspectiva de organizaciones de base sobre los principales problemas y posibles soluciones en los sistemas agroalimentarios.\nEn este proyecto participé activamente en las discusiones metodológicas, en la búsqueda de organizaciones y en la aplicación de entrevistas, aportando al desarrollo del trabajo de campo y a la construcción del enfoque de investigación.\nVer publicación original"
+  },
+  {
+    "objectID": "proyectos/sob_alimentaria.html#documento",
+    "href": "proyectos/sob_alimentaria.html#documento",
+    "title": "Soberanía alimentaria: los alimentos en el proyecto de la autodeterminación popular",
+    "section": "Documento",
+    "text": "Documento\nPuedes revisar el documento directamente aquí:"
   }
 ]
