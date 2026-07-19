@@ -1,0 +1,32 @@
+---
+title: "Soberanía alimentaria: los alimentos en el proyecto de la autodeterminación popular"
+description: "Investigación cualitativa del proyecto Fondecyt N°11180099 (dir. Martín Arboleda). Recoge la perspectiva de organizaciones de base sobre problemas y soluciones en los sistemas agroalimentarios."
+date: "2020-09-28"
+image: "../images/sob_al.png"
+categories:
+  - Investigación
+  - Sociología
+  - Cualitativa
+---
+
+## Descripción
+
+Investigación cualitativa del proyecto Fondecyt N°11180099, dirigido por Martín Arboleda. El trabajo recoge la perspectiva de organizaciones de base sobre los principales problemas y posibles soluciones en los sistemas agroalimentarios.
+
+En este proyecto participé activamente en las discusiones metodológicas, en la búsqueda de organizaciones y en la aplicación de entrevistas, aportando al desarrollo del trabajo de campo y a la construcción del enfoque de investigación.
+
+[Ver publicación original](https://transformacionessociales.udp.cl/?publicaciones=soberania-alimentaria-los-alimentos-en-el-proyecto-de-la-autodeterminacion-popular)
+
+## Documento
+
+Puedes revisar el documento directamente aquí:
+
+```{=html}
+<iframe
+  src="https://drive.google.com/file/d/1xKopGOlk3nWiECf16uIvp2H8I-gMzpJA/preview"
+  width="100%"
+  height="720"
+  style="border: 0;"
+  allow="autoplay">
+</iframe>
+```

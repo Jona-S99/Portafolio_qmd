@@ -1,0 +1,31 @@
+---
+title: "Bookdown D&A"
+description: "Libro electrónico con herramientas y automatizaciones en R desarrolladas para Datavoz."
+date: "2022-07-01"
+image: "../images/libro.png"
+categories:
+  - R
+  - Automatización
+  - Documentación
+  - Bookdown
+---
+
+## Descripción
+
+Libro electrónico con herramientas y automatizaciones en R desarrolladas para [Datavoz](https://datavoz.cl/). Este proyecto fue realizado en el contexto de mi práctica profesional para optar al título de Sociólogo en la Universidad Diego Portales.
+
+El objetivo del libro fue reunir, documentar y dejar disponibles para el equipo distintas soluciones de uso cotidiano en análisis de datos, de modo que el conocimiento técnico no quedara disperso entre scripts aislados, sino organizado en un recurso consultable, replicable y útil para el trabajo colaborativo.
+
+[Click aquí para ver el libro](https://jona-s99.github.io/Bookdown/)
+
+## Características generales
+
+- Documenté operaciones frecuentes de procesamiento de bases de datos en R, incluyendo recodificación, selección, filtrado, transformación de estructuras y uso de funciones personalizadas.
+- Integra automatizaciones aplicadas a tareas reales del equipo, como tabulaciones de frecuencia, diferencia de medias y exportación de resultados a Excel.
+- Reúne procedimientos metodológicos de uso profesional, como mallas de validación, construcción de ponderadores por raking y clasificación por nivel socioeconómico.
+- Incluye una sección orientada a R Markdown y reportes automáticos, mostrando cómo transformar análisis y monitoreo operativo en documentos reproducibles.
+- Está pensado como un recurso colaborativo para analistas, con una estructura que facilita agregar nuevos capítulos, ampliar funciones existentes y mantener estándares comunes de trabajo.
+
+## Habilidades que muestra este proyecto
+
+Este proyecto refleja mi capacidad para documentar procesos técnicos de forma clara, convertir tareas repetitivas en flujos automatizados y desarrollar herramientas en R pensadas para ser reutilizadas por otras personas.
