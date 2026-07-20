@@ -1,0 +1,85 @@
+---
+title: "Workflow de entrevistas cognitivas"
+description: "Aplicación web que utiliza agentes de IA para automatizar la codificación y revisión de entrevistas cognitivas."
+categories:
+  - Python
+  - IA generativa
+  - LangGraph
+  - FastAPI
+  - Automatización
+---
+
+## Descripción
+
+Aplicación web desarrollada en Python para apoyar la codificación de entrevistas cognitivas. El sistema recibe transcripciones en formatos PDF, DOC o DOCX, una pauta de preguntas en CSV y el contexto del estudio; luego transforma estos insumos y ejecuta un workflow con agentes de inteligencia artificial para producir una matriz de codificación estructurada.
+
+[Ver el repositorio en GitHub](https://github.com/Jona-S99/WorkflowCognitivas)
+
+## Funcionamiento general
+
+1. La persona usuaria carga las transcripciones y la pauta de evaluación desde una interfaz web.
+2. La aplicación convierte los documentos a Markdown y relaciona su contenido con las preguntas definidas en el archivo CSV.
+3. Un grafo construido con LangGraph distribuye los bloques de preguntas entre subagentes de codificación.
+4. Cada resultado pasa por un agente revisor que evalúa su calidad. Si no alcanza el umbral establecido, el bloque vuelve a la etapa de codificación hasta cumplir el criterio o alcanzar el máximo de intentos.
+5. Un reductor reúne los resultados aprobados y construye la matriz final.
+
+## Arquitectura
+
+El sistema organiza el procesamiento como un grafo de estados compuesto por un flujo principal y un subgrafo reutilizable de codificación. Esta estructura permite separar la preparación de los insumos, distribuir el trabajo entre varios bloques y aplicar el mismo control de calidad a cada resultado antes de consolidarlo.
+
+```{mermaid}
+flowchart TD
+    A[Usuario carga documentos y CSV] --> B[FastAPI recibe los archivos]
+    B --> C[Convierte transcripciones a Markdown]
+    C --> D[Extrae bloques de preguntas desde Markdown + CSV]
+    D --> E[fanout_a_subagente]
+    E --> F1[Send bloque 1]
+    E --> F2[Send bloque 2]
+    E --> F3[Send bloque N]
+
+    subgraph S[Subgrafo de codificación por bloque]
+        F1 --> G1[Codificación cognitiva]
+        G1 --> H1[Revisión de codificación]
+        H1 --> I1{Score >= umbral?}
+        I1 -- No, reintento --> G1
+        I1 -- Sí o máximo intentos --> J1[matriz_final]
+
+        F2 --> G2[Codificación cognitiva]
+        G2 --> H2[Revisión de codificación]
+        H2 --> I2{Score >= umbral?}
+        I2 -- No, reintento --> G2
+        I2 -- Sí o máximo intentos --> J2[matriz_final]
+
+        F3 --> G3[Codificación cognitiva]
+        G3 --> H3[Revisión de codificación]
+        H3 --> I3{Score >= umbral?}
+        I3 -- No, reintento --> G3
+        I3 -- Sí o máximo intentos --> J3[matriz_final]
+    end
+
+    J1 --> K[Reducer principal]
+    J2 --> K
+    J3 --> K
+    K --> L[Respuesta final y estado de la ejecución]
+```
+
+### Flujo principal
+
+FastAPI recibe las transcripciones y la pauta CSV cargadas por la persona usuaria. Las transcripciones se convierten a Markdown para normalizar el contenido y facilitar su procesamiento. A continuación, el sistema combina los documentos con la pauta y extrae bloques de preguntas que pueden analizarse de forma independiente.
+
+### Distribución del trabajo
+
+El nodo `fanout_a_subagente` distribuye los bloques mediante operaciones `Send` de LangGraph. Cada bloque ingresa al mismo subgrafo de codificación, lo que permite procesar una cantidad variable de preguntas sin duplicar la lógica del workflow. Esta arquitectura de *fan-out* facilita además la ejecución paralela de tareas independientes.
+
+### Codificación y control de calidad
+
+Dentro del subgrafo, un agente realiza la codificación cognitiva y otro revisa el resultado. La revisión produce un puntaje que se compara con un umbral de calidad. Si la codificación no alcanza ese valor, regresa al agente codificador para un nuevo intento; si lo alcanza, o se llega al máximo de intentos permitido, el bloque se incorpora a `matriz_final`. Este ciclo introduce una instancia explícita de evaluación y limita los reintentos para evitar ejecuciones indefinidas.
+
+### Consolidación de resultados
+
+Cuando terminan los distintos bloques, el reducer principal reúne sus matrices parciales en una única salida. Finalmente, la aplicación devuelve la matriz consolidada junto con el estado de la ejecución, que puede consultarse desde la interfaz web o mediante la API.
+
+
+## Habilidades que muestra este proyecto
+
+Este proyecto refleja mi capacidad para traducir un proceso metodológico especializado en un flujo de software reproducible, integrar modelos de lenguaje en una aplicación web y diseñar arquitecturas con agentes que incorporan paralelización, evaluación automática y mecanismos de control de calidad. También muestra experiencia en desarrollo backend con Python, modelado de workflows con LangGraph y construcción de interfaces orientadas a personas usuarias.

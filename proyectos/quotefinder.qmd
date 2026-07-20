@@ -1,0 +1,94 @@
+---
+title: "QuoteFinder"
+description: "Aplicación web para localizar citas textuales en documentos mediante un RAG jerárquico optimizado para modelos locales livianos."
+categories:
+  - Python
+  - RAG
+  - Ollama
+  - LangGraph
+  - FastAPI
+  - IA generativa
+---
+
+## Descripción
+
+QuoteFinder es una aplicación web diseñada para buscar citas textuales dentro de documentos proporcionados por el usuario. A diferencia de un RAG orientado a generar respuestas generales, el sistema se concentra en recuperar evidencia literal y devolverla en Markdown junto con metadatos relevantes, como el archivo de origen y la identificación del documento o participante.
+
+El proyecto está optimizado para ejecutarse localmente con modelos livianos mediante Ollama. Para reducir el trabajo que debe realizar el modelo final, la aplicación combina recuperación jerárquica, reranking y compresión del contexto: primero localiza fragmentos precisos, luego recupera el contexto amplio al que pertenecen y finalmente conserva solo los resultados con mayor relevancia para la consulta.
+
+[Ver el repositorio en GitHub](https://github.com/Jona-S99/QuoteFinder)
+
+## Los problemas que resuelve
+
+El primer desafío es la privacidad. Quería construir una herramienta que protegiera las respuestas de las personas participantes y que sirviera de apoyo a quienes realizan investigación en ciencias sociales. En entrevistas y grupos focales se trabaja con información sensible, por lo que no es apropiado subir las transcripciones a servicios de inteligencia artificial en la nube, como ChatGPT o Claude.
+
+El segundo desafío se relaciona directamente con el anterior. Si las transcripciones no pueden procesarse en la nube, es necesario utilizar un modelo de lenguaje local. Sin embargo, estos modelos pueden resultar computacionalmente exigentes si no se implementan mediante una arquitectura eficiente. El objetivo, por tanto, no es depender de un equipo especializado con múltiples GPU, sino permitir que la aplicación funcione en un computador portátil actual con prestaciones razonables.
+
+Con este proyecto busco acercar la inteligencia artificial a la investigación social mediante una herramienta que ayude a identificar citas y elementos de interés en las transcripciones, sin perder de vista la privacidad de la información ni exigir recursos computacionales fuera del alcance de la mayoría de las personas.
+
+QuoteFinder desplaza la mayor parte de ese trabajo hacia una cadena especializada de recuperación. El modelo generativo recibe un contexto breve y previamente seleccionado, por lo que puede concentrarse en una tarea acotada: extraer citas textuales, conservar su procedencia y aplicar un formato consistente.
+
+## Arquitectura
+
+```{mermaid}
+flowchart TD
+    A[Usuario carga PDF, DOCX o Markdown] --> B[FastAPI recibe los documentos]
+    B --> C[Docling normaliza el contenido a Markdown]
+
+    subgraph INDEXACION[Indexación parent-child]
+        C --> D[Chunks padre: contexto amplio]
+        D --> E[Chunks hijo: fragmentos precisos]
+        E --> F[Embeddings locales con Ollama]
+        F --> G[(LanceDB local)]
+        D --> H[(Parent store con texto y metadatos)]
+    end
+
+    Q[Consulta del usuario] --> I[Retrieval semántico sobre chunks hijo]
+    G --> I
+    I --> J[Expansión de cada match a su chunk padre]
+    H --> J
+    J --> K[FlashRank rerankea usando el hijo coincidente]
+    K --> L[Selección de los mejores contextos padre]
+    L --> M[Modelo local liviano con Ollama]
+    Q --> M
+    M --> N[Citas textuales en Markdown y metadatos de origen]
+```
+
+La arquitectura separa la preparación del corpus de la ejecución de consultas. Durante la indexación se construye una base vectorial local; durante la búsqueda se recuperan, filtran y reorganizan los fragmentos antes de invocar el modelo generativo.
+
+### RAG jerárquico parent–child
+
+La técnica principal consiste en representar cada documento en dos niveles:
+
+- Los **chunks padre** son bloques amplios que conservan suficiente contexto para interpretar y citar correctamente un fragmento. Por defecto utilizan 2.500 caracteres con un solapamiento de 300.
+- Los **chunks hijo** son fragmentos más pequeños, de 600 caracteres y 100 de solapamiento por defecto. Estos sí se transforman en embeddings y se almacenan en LanceDB porque permiten una búsqueda semántica más precisa.
+
+Cada chunk hijo mantiene el identificador de su padre. Cuando la búsqueda encuentra un hijo relevante, QuoteFinder recupera el texto completo del bloque padre desde un almacén local y elimina padres duplicados. Así combina precisión durante la búsqueda con amplitud de contexto durante la generación, sin tener que vectorizar ni enviar documentos completos al modelo.
+
+### Retrieval y reranking
+
+La consulta se transforma en un embedding con un modelo local de Ollama —`bge-m3` por defecto— y recupera inicialmente hasta 40 fragmentos hijo desde LanceDB. Después de expandirlos a sus respectivos padres, el sistema aplica FlashRank con `ms-marco-TinyBERT-L-2-v2`.
+
+El reranker compara la consulta con el fragmento hijo que originó cada coincidencia, donde se encuentra la señal más precisa, pero conserva como resultado el bloque padre completo. Por defecto solo los cinco contextos mejor posicionados avanzan al modelo final. Este paso funciona como una compresión de contexto: reduce falsos positivos, elimina información redundante y limita la cantidad de tokens que debe procesar el LLM.
+
+### Generación local de citas
+
+LangGraph organiza la consulta en tres nodos consecutivos: `Retrieve`, `Rerank` y `Response`. El último nodo utiliza `llama3.2:3b` mediante Ollama, con temperatura cero, para extraer citas textuales y presentarlas en Markdown. El prompt restringe la salida para evitar explicaciones adicionales y conserva información de procedencia como el archivo fuente y el participante asociado.
+
+Esta división permite que el modelo liviano no tenga que descubrir por sí solo dónde está la evidencia. Recibe pocos bloques, relevantes y con contexto suficiente, y se dedica principalmente a seleccionar y formatear las citas.
+
+## Características principales
+
+- Carga de documentos PDF, DOCX y Markdown desde una interfaz web.
+- Conversión y normalización documental con Docling.
+- Indexación jerárquica configurable mediante chunks padre e hijo.
+- Embeddings y generación ejecutados localmente con modelos disponibles en Ollama.
+- Persistencia vectorial local con LanceDB y almacenamiento separado de los bloques padre.
+- Reranking eficiente con FlashRank y un modelo TinyBERT almacenado en caché local.
+- Configuración desde la interfaz de los tamaños de chunk, cantidad de resultados recuperados, número de contextos finales y modelos utilizados.
+- API desarrollada con FastAPI y workflow de consulta modelado con LangGraph.
+- Observabilidad opcional de las ejecuciones mediante Phoenix y OpenTelemetry.
+
+## Habilidades que muestra este proyecto
+
+QuoteFinder refleja mi capacidad para diseñar sistemas RAG más allá de la recuperación vectorial básica. El proyecto integra procesamiento documental, chunking jerárquico, embeddings, bases vectoriales, reranking y orquestación de modelos locales en una aplicación web completa. También muestra un enfoque consciente de las restricciones de hardware y contexto, optimizando cada etapa para obtener resultados útiles con modelos pequeños y mantener la trazabilidad de la evidencia recuperada.
