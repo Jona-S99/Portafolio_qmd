@@ -35,6 +35,76 @@
     "text": "Educación\n\n  \n  \n  \n    \n      \n        \n          Diplomado en Inteligencia Artificial Generativa\n          Pontificia Universidad Católica de Chile — Santiago, Chile\n        \n        2025 — 2026\n      \n    \n\n    \n      \n        \n          Sociólogo\n          Universidad Diego Portales — Santiago, Chile\n        \n        2018 — 2022\n      \n    \n\n    \n      \n        \n          Diploma de Honor en Historia de las Ideas Políticas en Chile\n          Universidad Diego Portales — Santiago, Chile\n        \n        2020"
   },
   {
+    "objectID": "proyectos/sob_alimentaria.html",
+    "href": "proyectos/sob_alimentaria.html",
+    "title": "Soberanía alimentaria: los alimentos en el proyecto de la autodeterminación popular",
+    "section": "",
+    "text": "Investigación cualitativa del proyecto Fondecyt N°11180099, dirigido por Martín Arboleda. El trabajo recoge la perspectiva de organizaciones de base sobre los principales problemas y posibles soluciones en los sistemas agroalimentarios.\nEn este proyecto participé activamente en las discusiones metodológicas, en la búsqueda de organizaciones y en la aplicación de entrevistas, aportando al desarrollo del trabajo de campo y a la construcción del enfoque de investigación.\nVer publicación original"
+  },
+  {
+    "objectID": "proyectos/sob_alimentaria.html#descripción",
+    "href": "proyectos/sob_alimentaria.html#descripción",
+    "title": "Soberanía alimentaria: los alimentos en el proyecto de la autodeterminación popular",
+    "section": "",
+    "text": "Investigación cualitativa del proyecto Fondecyt N°11180099, dirigido por Martín Arboleda. El trabajo recoge la perspectiva de organizaciones de base sobre los principales problemas y posibles soluciones en los sistemas agroalimentarios.\nEn este proyecto participé activamente en las discusiones metodológicas, en la búsqueda de organizaciones y en la aplicación de entrevistas, aportando al desarrollo del trabajo de campo y a la construcción del enfoque de investigación.\nVer publicación original"
+  },
+  {
+    "objectID": "proyectos/sob_alimentaria.html#documento",
+    "href": "proyectos/sob_alimentaria.html#documento",
+    "title": "Soberanía alimentaria: los alimentos en el proyecto de la autodeterminación popular",
+    "section": "Documento",
+    "text": "Documento\nPuedes revisar el documento directamente aquí:"
+  },
+  {
+    "objectID": "proyectos/quotefinder.html",
+    "href": "proyectos/quotefinder.html",
+    "title": "QuoteFinder",
+    "section": "",
+    "text": "QuoteFinder es una aplicación web diseñada para buscar citas textuales dentro de documentos proporcionados por el usuario. A diferencia de un RAG orientado a generar respuestas generales, el sistema se concentra en recuperar evidencia literal y devolverla en Markdown junto con metadatos relevantes, como el archivo de origen y la identificación del documento o participante.\nEl proyecto está optimizado para ejecutarse localmente con modelos livianos mediante Ollama. Para reducir el trabajo que debe realizar el modelo final, la aplicación combina recuperación jerárquica, reranking y compresión del contexto: primero localiza fragmentos precisos, luego recupera el contexto amplio al que pertenecen y finalmente conserva solo los resultados con mayor relevancia para la consulta.\nVer el repositorio en GitHub"
+  },
+  {
+    "objectID": "proyectos/quotefinder.html#descripción",
+    "href": "proyectos/quotefinder.html#descripción",
+    "title": "QuoteFinder",
+    "section": "",
+    "text": "QuoteFinder es una aplicación web diseñada para buscar citas textuales dentro de documentos proporcionados por el usuario. A diferencia de un RAG orientado a generar respuestas generales, el sistema se concentra en recuperar evidencia literal y devolverla en Markdown junto con metadatos relevantes, como el archivo de origen y la identificación del documento o participante.\nEl proyecto está optimizado para ejecutarse localmente con modelos livianos mediante Ollama. Para reducir el trabajo que debe realizar el modelo final, la aplicación combina recuperación jerárquica, reranking y compresión del contexto: primero localiza fragmentos precisos, luego recupera el contexto amplio al que pertenecen y finalmente conserva solo los resultados con mayor relevancia para la consulta.\nVer el repositorio en GitHub"
+  },
+  {
+    "objectID": "proyectos/quotefinder.html#los-problemas-que-resuelve",
+    "href": "proyectos/quotefinder.html#los-problemas-que-resuelve",
+    "title": "QuoteFinder",
+    "section": "Los problemas que resuelve",
+    "text": "Los problemas que resuelve\nEl primer desafío es la privacidad. Quería construir una herramienta que protegiera las respuestas de las personas participantes y que sirviera de apoyo a quienes realizan investigación en ciencias sociales. En entrevistas y grupos focales se trabaja con información sensible, por lo que no es apropiado subir las transcripciones a servicios de inteligencia artificial en la nube, como ChatGPT o Claude.\nEl segundo desafío se relaciona directamente con el anterior. Si las transcripciones no pueden procesarse en la nube, es necesario utilizar un modelo de lenguaje local. Sin embargo, estos modelos pueden resultar computacionalmente exigentes si no se implementan mediante una arquitectura eficiente. El objetivo, por tanto, no es depender de un equipo especializado con múltiples GPU, sino permitir que la aplicación funcione en un computador portátil actual con prestaciones razonables.\nCon este proyecto busco acercar la inteligencia artificial a la investigación social mediante una herramienta que ayude a identificar citas y elementos de interés en las transcripciones, sin perder de vista la privacidad de la información ni exigir recursos computacionales fuera del alcance de la mayoría de las personas.\nQuoteFinder desplaza la mayor parte de ese trabajo hacia una cadena especializada de recuperación. El modelo generativo recibe un contexto breve y previamente seleccionado, por lo que puede concentrarse en una tarea acotada: extraer citas textuales, conservar su procedencia y aplicar un formato consistente."
+  },
+  {
+    "objectID": "proyectos/quotefinder.html#arquitectura",
+    "href": "proyectos/quotefinder.html#arquitectura",
+    "title": "QuoteFinder",
+    "section": "Arquitectura",
+    "text": "Arquitectura\n\n\n\n\n\nflowchart TD\n    A[Usuario carga PDF, DOCX o Markdown] --&gt; B[FastAPI recibe los documentos]\n    B --&gt; C[Docling normaliza el contenido a Markdown]\n\n    subgraph INDEXACION[Indexación parent-child]\n        C --&gt; D[Chunks padre: contexto amplio]\n        D --&gt; E[Chunks hijo: fragmentos precisos]\n        E --&gt; F[Embeddings locales con Ollama]\n        F --&gt; G[(LanceDB local)]\n        D --&gt; H[(Parent store con texto y metadatos)]\n    end\n\n    Q[Consulta del usuario] --&gt; I[Retrieval semántico sobre chunks hijo]\n    G --&gt; I\n    I --&gt; J[Expansión de cada match a su chunk padre]\n    H --&gt; J\n    J --&gt; K[FlashRank rerankea usando el hijo coincidente]\n    K --&gt; L[Selección de los mejores contextos padre]\n    L --&gt; M[Modelo local liviano con Ollama]\n    Q --&gt; M\n    M --&gt; N[Citas textuales en Markdown y metadatos de origen]\n\n\n\n\n\n\nLa arquitectura separa la preparación del corpus de la ejecución de consultas. Durante la indexación se construye una base vectorial local; durante la búsqueda se recuperan, filtran y reorganizan los fragmentos antes de invocar el modelo generativo.\n\nRAG jerárquico parent–child\nLa técnica principal consiste en representar cada documento en dos niveles:\n\nLos chunks padre son bloques amplios que conservan suficiente contexto para interpretar y citar correctamente un fragmento. Por defecto utilizan 2.500 caracteres con un solapamiento de 300.\nLos chunks hijo son fragmentos más pequeños, de 600 caracteres y 100 de solapamiento por defecto. Estos sí se transforman en embeddings y se almacenan en LanceDB porque permiten una búsqueda semántica más precisa.\n\nCada chunk hijo mantiene el identificador de su padre. Cuando la búsqueda encuentra un hijo relevante, QuoteFinder recupera el texto completo del bloque padre desde un almacén local y elimina padres duplicados. Así combina precisión durante la búsqueda con amplitud de contexto durante la generación, sin tener que vectorizar ni enviar documentos completos al modelo.\n\n\nRetrieval y reranking\nLa consulta se transforma en un embedding con un modelo local de Ollama —bge-m3 por defecto— y recupera inicialmente hasta 40 fragmentos hijo desde LanceDB. Después de expandirlos a sus respectivos padres, el sistema aplica FlashRank con ms-marco-TinyBERT-L-2-v2.\nEl reranker compara la consulta con el fragmento hijo que originó cada coincidencia, donde se encuentra la señal más precisa, pero conserva como resultado el bloque padre completo. Por defecto solo los cinco contextos mejor posicionados avanzan al modelo final. Este paso funciona como una compresión de contexto: reduce falsos positivos, elimina información redundante y limita la cantidad de tokens que debe procesar el LLM.\n\n\nGeneración local de citas\nLangGraph organiza la consulta en tres nodos consecutivos: Retrieve, Rerank y Response. El último nodo utiliza llama3.2:3b mediante Ollama, con temperatura cero, para extraer citas textuales y presentarlas en Markdown. El prompt restringe la salida para evitar explicaciones adicionales y conserva información de procedencia como el archivo fuente y el participante asociado.\nEsta división permite que el modelo liviano no tenga que descubrir por sí solo dónde está la evidencia. Recibe pocos bloques, relevantes y con contexto suficiente, y se dedica principalmente a seleccionar y formatear las citas."
+  },
+  {
+    "objectID": "proyectos/quotefinder.html#características-principales",
+    "href": "proyectos/quotefinder.html#características-principales",
+    "title": "QuoteFinder",
+    "section": "Características principales",
+    "text": "Características principales\n\nCarga de documentos PDF, DOCX y Markdown desde una interfaz web.\nConversión y normalización documental con Docling.\nIndexación jerárquica configurable mediante chunks padre e hijo.\nEmbeddings y generación ejecutados localmente con modelos disponibles en Ollama.\nPersistencia vectorial local con LanceDB y almacenamiento separado de los bloques padre.\nReranking eficiente con FlashRank y un modelo TinyBERT almacenado en caché local.\nConfiguración desde la interfaz de los tamaños de chunk, cantidad de resultados recuperados, número de contextos finales y modelos utilizados.\nAPI desarrollada con FastAPI y workflow de consulta modelado con LangGraph.\nObservabilidad opcional de las ejecuciones mediante Phoenix y OpenTelemetry."
+  },
+  {
+    "objectID": "proyectos/quotefinder.html#habilidades-que-muestra-este-proyecto",
+    "href": "proyectos/quotefinder.html#habilidades-que-muestra-este-proyecto",
+    "title": "QuoteFinder",
+    "section": "Habilidades que muestra este proyecto",
+    "text": "Habilidades que muestra este proyecto\nQuoteFinder refleja mi capacidad para diseñar sistemas RAG más allá de la recuperación vectorial básica. El proyecto integra procesamiento documental, chunking jerárquico, embeddings, bases vectoriales, reranking y orquestación de modelos locales en una aplicación web completa. También muestra un enfoque consciente de las restricciones de hardware y contexto, optimizando cada etapa para obtener resultados útiles con modelos pequeños y mantener la trazabilidad de la evidencia recuperada."
+  },
+  {
+    "objectID": "proyectos.html",
+    "href": "proyectos.html",
+    "title": "Proyectos",
+    "section": "",
+    "text": "QuoteFinder\n\n\n\nPython\n\nRAG\n\nOllama\n\nLangGraph\n\nFastAPI\n\nIA generativa\n\n\n\nAplicación web para localizar citas textuales en documentos mediante un RAG jerárquico optimizado para modelos locales livianos.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWorkflow de entrevistas cognitivas\n\n\n\nPython\n\nIA generativa\n\nLangGraph\n\nFastAPI\n\nAutomatización\n\n\n\nAplicación web que utiliza agentes de IA para automatizar la codificación y revisión de entrevistas cognitivas.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBookdown D&A\n\n\n\nR\n\nAutomatización\n\nDocumentación\n\nBookdown\n\n\n\nLibro electrónico con herramientas y automatizaciones en R desarrolladas para Datavoz.\n\n\n\n\n\nJul 1, 2022\n\n\n\n\n\n\n\n\n\n\n\n\nSoberanía alimentaria: los alimentos en el proyecto de la autodeterminación popular\n\n\n\nInvestigación\n\nSociología\n\nCualitativa\n\n\n\nInvestigación cualitativa del proyecto Fondecyt N°11180099 (dir. Martín Arboleda). Recoge la perspectiva de organizaciones de base sobre problemas y soluciones en los sistemas agroalimentarios.\n\n\n\n\n\nSep 28, 2020\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "proyectos/book_da.html",
     "href": "proyectos/book_da.html",
     "title": "Bookdown D&A",
@@ -63,31 +133,38 @@
     "text": "Habilidades que muestra este proyecto\nEste proyecto refleja mi capacidad para documentar procesos técnicos de forma clara, convertir tareas repetitivas en flujos automatizados y desarrollar herramientas en R pensadas para ser reutilizadas por otras personas."
   },
   {
-    "objectID": "proyectos.html",
-    "href": "proyectos.html",
-    "title": "Proyectos",
+    "objectID": "proyectos/wf_cognitivas.html",
+    "href": "proyectos/wf_cognitivas.html",
+    "title": "Workflow de entrevistas cognitivas",
     "section": "",
-    "text": "Bookdown D&A\n\n\n\nR\n\nAutomatización\n\nDocumentación\n\nBookdown\n\n\n\nLibro electrónico con herramientas y automatizaciones en R desarrolladas para Datavoz.\n\n\n\n\n\nJul 1, 2022\n\n\n\n\n\n\n\n\n\n\n\n\nSoberanía alimentaria: los alimentos en el proyecto de la autodeterminación popular\n\n\n\nInvestigación\n\nSociología\n\nCualitativa\n\n\n\nInvestigación cualitativa del proyecto Fondecyt N°11180099 (dir. Martín Arboleda). Recoge la perspectiva de organizaciones de base sobre problemas y soluciones en los sistemas agroalimentarios.\n\n\n\n\n\nSep 28, 2020\n\n\n\n\n\nNo matching items"
+    "text": "Aplicación web desarrollada en Python para apoyar la codificación de entrevistas cognitivas. El sistema recibe transcripciones en formatos PDF, DOC o DOCX, una pauta de preguntas en CSV y el contexto del estudio; luego transforma estos insumos y ejecuta un workflow con agentes de inteligencia artificial para producir una matriz de codificación estructurada.\nVer el repositorio en GitHub"
   },
   {
-    "objectID": "proyectos/sob_alimentaria.html",
-    "href": "proyectos/sob_alimentaria.html",
-    "title": "Soberanía alimentaria: los alimentos en el proyecto de la autodeterminación popular",
+    "objectID": "proyectos/wf_cognitivas.html#descripción",
+    "href": "proyectos/wf_cognitivas.html#descripción",
+    "title": "Workflow de entrevistas cognitivas",
     "section": "",
-    "text": "Investigación cualitativa del proyecto Fondecyt N°11180099, dirigido por Martín Arboleda. El trabajo recoge la perspectiva de organizaciones de base sobre los principales problemas y posibles soluciones en los sistemas agroalimentarios.\nEn este proyecto participé activamente en las discusiones metodológicas, en la búsqueda de organizaciones y en la aplicación de entrevistas, aportando al desarrollo del trabajo de campo y a la construcción del enfoque de investigación.\nVer publicación original"
+    "text": "Aplicación web desarrollada en Python para apoyar la codificación de entrevistas cognitivas. El sistema recibe transcripciones en formatos PDF, DOC o DOCX, una pauta de preguntas en CSV y el contexto del estudio; luego transforma estos insumos y ejecuta un workflow con agentes de inteligencia artificial para producir una matriz de codificación estructurada.\nVer el repositorio en GitHub"
   },
   {
-    "objectID": "proyectos/sob_alimentaria.html#descripción",
-    "href": "proyectos/sob_alimentaria.html#descripción",
-    "title": "Soberanía alimentaria: los alimentos en el proyecto de la autodeterminación popular",
-    "section": "",
-    "text": "Investigación cualitativa del proyecto Fondecyt N°11180099, dirigido por Martín Arboleda. El trabajo recoge la perspectiva de organizaciones de base sobre los principales problemas y posibles soluciones en los sistemas agroalimentarios.\nEn este proyecto participé activamente en las discusiones metodológicas, en la búsqueda de organizaciones y en la aplicación de entrevistas, aportando al desarrollo del trabajo de campo y a la construcción del enfoque de investigación.\nVer publicación original"
+    "objectID": "proyectos/wf_cognitivas.html#funcionamiento-general",
+    "href": "proyectos/wf_cognitivas.html#funcionamiento-general",
+    "title": "Workflow de entrevistas cognitivas",
+    "section": "Funcionamiento general",
+    "text": "Funcionamiento general\n\nLa persona usuaria carga las transcripciones y la pauta de evaluación desde una interfaz web.\nLa aplicación convierte los documentos a Markdown y relaciona su contenido con las preguntas definidas en el archivo CSV.\nUn grafo construido con LangGraph distribuye los bloques de preguntas entre subagentes de codificación.\nCada resultado pasa por un agente revisor que evalúa su calidad. Si no alcanza el umbral establecido, el bloque vuelve a la etapa de codificación hasta cumplir el criterio o alcanzar el máximo de intentos.\nUn reductor reúne los resultados aprobados y construye la matriz final."
   },
   {
-    "objectID": "proyectos/sob_alimentaria.html#documento",
-    "href": "proyectos/sob_alimentaria.html#documento",
-    "title": "Soberanía alimentaria: los alimentos en el proyecto de la autodeterminación popular",
-    "section": "Documento",
-    "text": "Documento\nPuedes revisar el documento directamente aquí:"
+    "objectID": "proyectos/wf_cognitivas.html#arquitectura",
+    "href": "proyectos/wf_cognitivas.html#arquitectura",
+    "title": "Workflow de entrevistas cognitivas",
+    "section": "Arquitectura",
+    "text": "Arquitectura\nEl sistema organiza el procesamiento como un grafo de estados compuesto por un flujo principal y un subgrafo reutilizable de codificación. Esta estructura permite separar la preparación de los insumos, distribuir el trabajo entre varios bloques y aplicar el mismo control de calidad a cada resultado antes de consolidarlo.\n\n\n\n\n\nflowchart TD\n    A[Usuario carga documentos y CSV] --&gt; B[FastAPI recibe los archivos]\n    B --&gt; C[Convierte transcripciones a Markdown]\n    C --&gt; D[Extrae bloques de preguntas desde Markdown + CSV]\n    D --&gt; E[fanout_a_subagente]\n    E --&gt; F1[Send bloque 1]\n    E --&gt; F2[Send bloque 2]\n    E --&gt; F3[Send bloque N]\n\n    subgraph S[Subgrafo de codificación por bloque]\n        F1 --&gt; G1[Codificación cognitiva]\n        G1 --&gt; H1[Revisión de codificación]\n        H1 --&gt; I1{Score &gt;= umbral?}\n        I1 -- No, reintento --&gt; G1\n        I1 -- Sí o máximo intentos --&gt; J1[matriz_final]\n\n        F2 --&gt; G2[Codificación cognitiva]\n        G2 --&gt; H2[Revisión de codificación]\n        H2 --&gt; I2{Score &gt;= umbral?}\n        I2 -- No, reintento --&gt; G2\n        I2 -- Sí o máximo intentos --&gt; J2[matriz_final]\n\n        F3 --&gt; G3[Codificación cognitiva]\n        G3 --&gt; H3[Revisión de codificación]\n        H3 --&gt; I3{Score &gt;= umbral?}\n        I3 -- No, reintento --&gt; G3\n        I3 -- Sí o máximo intentos --&gt; J3[matriz_final]\n    end\n\n    J1 --&gt; K[Reducer principal]\n    J2 --&gt; K\n    J3 --&gt; K\n    K --&gt; L[Respuesta final y estado de la ejecución]\n\n\n\n\n\n\n\nFlujo principal\nFastAPI recibe las transcripciones y la pauta CSV cargadas por la persona usuaria. Las transcripciones se convierten a Markdown para normalizar el contenido y facilitar su procesamiento. A continuación, el sistema combina los documentos con la pauta y extrae bloques de preguntas que pueden analizarse de forma independiente.\n\n\nDistribución del trabajo\nEl nodo fanout_a_subagente distribuye los bloques mediante operaciones Send de LangGraph. Cada bloque ingresa al mismo subgrafo de codificación, lo que permite procesar una cantidad variable de preguntas sin duplicar la lógica del workflow. Esta arquitectura de fan-out facilita además la ejecución paralela de tareas independientes.\n\n\nCodificación y control de calidad\nDentro del subgrafo, un agente realiza la codificación cognitiva y otro revisa el resultado. La revisión produce un puntaje que se compara con un umbral de calidad. Si la codificación no alcanza ese valor, regresa al agente codificador para un nuevo intento; si lo alcanza, o se llega al máximo de intentos permitido, el bloque se incorpora a matriz_final. Este ciclo introduce una instancia explícita de evaluación y limita los reintentos para evitar ejecuciones indefinidas.\n\n\nConsolidación de resultados\nCuando terminan los distintos bloques, el reducer principal reúne sus matrices parciales en una única salida. Finalmente, la aplicación devuelve la matriz consolidada junto con el estado de la ejecución, que puede consultarse desde la interfaz web o mediante la API."
+  },
+  {
+    "objectID": "proyectos/wf_cognitivas.html#habilidades-que-muestra-este-proyecto",
+    "href": "proyectos/wf_cognitivas.html#habilidades-que-muestra-este-proyecto",
+    "title": "Workflow de entrevistas cognitivas",
+    "section": "Habilidades que muestra este proyecto",
+    "text": "Habilidades que muestra este proyecto\nEste proyecto refleja mi capacidad para traducir un proceso metodológico especializado en un flujo de software reproducible, integrar modelos de lenguaje en una aplicación web y diseñar arquitecturas con agentes que incorporan paralelización, evaluación automática y mecanismos de control de calidad. También muestra experiencia en desarrollo backend con Python, modelado de workflows con LangGraph y construcción de interfaces orientadas a personas usuarias."
   }
 ]

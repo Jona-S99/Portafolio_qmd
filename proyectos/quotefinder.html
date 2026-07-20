@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Aplicación web para localizar citas textuales en documentos mediante un RAG jerárquico optimizado para modelos locales livianos.">
 
-<title>Proyectos – Jonatan Salazar</title>
+<title>QuoteFinder – Jonatan Salazar</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,29 +27,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="././images/logo_portafolio.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-1c07c896eede20a9f05e2a6b9450fb35.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-4b66a41e96f2a42dfe9f81a482d9326b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-1c07c896eede20a9f05e2a6b9450fb35.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href=".././images/logo_portafolio.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-1c07c896eede20a9f05e2a6b9450fb35.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-4b66a41e96f2a42dfe9f81a482d9326b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-1c07c896eede20a9f05e2a6b9450fb35.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -75,68 +74,13 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="styles_dark.css">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../styles_dark.css">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -308,9 +252,9 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="././images/logo_portafolio.png" alt="" class="navbar-logo light-content">
-    <img src="././images/logo_portafolio.png" alt="" class="navbar-logo dark-content">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src=".././images/logo_portafolio.png" alt="" class="navbar-logo light-content">
+    <img src=".././images/logo_portafolio.png" alt="" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -320,11 +264,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Portafolio</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./proyectos.html" aria-current="page"> 
+    <a class="nav-link" href="../proyectos.html"> 
 <span class="menu-text">Proyectos</span></a>
   </li>  
 </ul>
@@ -347,17 +291,45 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="QXV0b21hdGl6YWNpJUMzJUIzbg==">Automatización <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Qm9va2Rvd24=">Bookdown <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q3VhbGl0YXRpdmE=">Cualitativa <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RG9jdW1lbnRhY2klQzMlQjNu">Documentación <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RmFzdEFQSQ==">FastAPI <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SUElMjBnZW5lcmF0aXZh">IA generativa <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SW52ZXN0aWdhY2klQzMlQjNu">Investigación <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TGFuZ0dyYXBo">LangGraph <span class="quarto-category-count">(2)</span></div><div class="category" data-category="T2xsYW1h">Ollama <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHl0aG9u">Python <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UkFH">RAG <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U29jaW9sb2clQzMlQURh">Sociología <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#descripción" id="toc-descripción" class="nav-link active" data-scroll-target="#descripción">Descripción</a></li>
+  <li><a href="#los-problemas-que-resuelve" id="toc-los-problemas-que-resuelve" class="nav-link" data-scroll-target="#los-problemas-que-resuelve">Los problemas que resuelve</a></li>
+  <li><a href="#arquitectura" id="toc-arquitectura" class="nav-link" data-scroll-target="#arquitectura">Arquitectura</a>
+  <ul class="collapse">
+  <li><a href="#rag-jerárquico-parentchild" id="toc-rag-jerárquico-parentchild" class="nav-link" data-scroll-target="#rag-jerárquico-parentchild">RAG jerárquico parent–child</a></li>
+  <li><a href="#retrieval-y-reranking" id="toc-retrieval-y-reranking" class="nav-link" data-scroll-target="#retrieval-y-reranking">Retrieval y reranking</a></li>
+  <li><a href="#generación-local-de-citas" id="toc-generación-local-de-citas" class="nav-link" data-scroll-target="#generación-local-de-citas">Generación local de citas</a></li>
+  </ul></li>
+  <li><a href="#características-principales" id="toc-características-principales" class="nav-link" data-scroll-target="#características-principales">Características principales</a></li>
+  <li><a href="#habilidades-que-muestra-este-proyecto" id="toc-habilidades-que-muestra-este-proyecto" class="nav-link" data-scroll-target="#habilidades-que-muestra-este-proyecto">Habilidades que muestra este proyecto</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/Jona-S99/Portafolio_qmd/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Proyectos</h1>
-</div>
+<h1 class="title">QuoteFinder</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Python</div>
+    <div class="quarto-category">RAG</div>
+    <div class="quarto-category">Ollama</div>
+    <div class="quarto-category">LangGraph</div>
+    <div class="quarto-category">FastAPI</div>
+    <div class="quarto-category">IA generativa</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    Aplicación web para localizar citas textuales en documentos mediante un RAG jerárquico optimizado para modelos locales livianos.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -372,145 +344,96 @@ window.Quarto = {
 </header>
 
 
+<section id="descripción" class="level2">
+<h2 class="anchored" data-anchor-id="descripción">Descripción</h2>
+<p>QuoteFinder es una aplicación web diseñada para buscar citas textuales dentro de documentos proporcionados por el usuario. A diferencia de un RAG orientado a generar respuestas generales, el sistema se concentra en recuperar evidencia literal y devolverla en Markdown junto con metadatos relevantes, como el archivo de origen y la identificación del documento o participante.</p>
+<p>El proyecto está optimizado para ejecutarse localmente con modelos livianos mediante Ollama. Para reducir el trabajo que debe realizar el modelo final, la aplicación combina recuperación jerárquica, reranking y compresión del contexto: primero localiza fragmentos precisos, luego recupera el contexto amplio al que pertenecen y finalmente conserva solo los resultados con mayor relevancia para la consulta.</p>
+<p><a href="https://github.com/Jona-S99/QuoteFinder">Ver el repositorio en GitHub</a></p>
+</section>
+<section id="los-problemas-que-resuelve" class="level2">
+<h2 class="anchored" data-anchor-id="los-problemas-que-resuelve">Los problemas que resuelve</h2>
+<p>El primer desafío es la privacidad. Quería construir una herramienta que protegiera las respuestas de las personas participantes y que sirviera de apoyo a quienes realizan investigación en ciencias sociales. En entrevistas y grupos focales se trabaja con información sensible, por lo que no es apropiado subir las transcripciones a servicios de inteligencia artificial en la nube, como ChatGPT o Claude.</p>
+<p>El segundo desafío se relaciona directamente con el anterior. Si las transcripciones no pueden procesarse en la nube, es necesario utilizar un modelo de lenguaje local. Sin embargo, estos modelos pueden resultar computacionalmente exigentes si no se implementan mediante una arquitectura eficiente. El objetivo, por tanto, no es depender de un equipo especializado con múltiples GPU, sino permitir que la aplicación funcione en un computador portátil actual con prestaciones razonables.</p>
+<p>Con este proyecto busco acercar la inteligencia artificial a la investigación social mediante una herramienta que ayude a identificar citas y elementos de interés en las transcripciones, sin perder de vista la privacidad de la información ni exigir recursos computacionales fuera del alcance de la mayoría de las personas.</p>
+<p>QuoteFinder desplaza la mayor parte de ese trabajo hacia una cadena especializada de recuperación. El modelo generativo recibe un contexto breve y previamente seleccionado, por lo que puede concentrarse en una tarea acotada: extraer citas textuales, conservar su procedencia y aplicar un formato consistente.</p>
+</section>
+<section id="arquitectura" class="level2">
+<h2 class="anchored" data-anchor-id="arquitectura">Arquitectura</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Usuario carga PDF, DOCX o Markdown] --&gt; B[FastAPI recibe los documentos]
+    B --&gt; C[Docling normaliza el contenido a Markdown]
 
+    subgraph INDEXACION[Indexación parent-child]
+        C --&gt; D[Chunks padre: contexto amplio]
+        D --&gt; E[Chunks hijo: fragmentos precisos]
+        E --&gt; F[Embeddings locales con Ollama]
+        F --&gt; G[(LanceDB local)]
+        D --&gt; H[(Parent store con texto y metadatos)]
+    end
 
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="UHl0aG9uJTJDUkFHJTJDT2xsYW1hJTJDTGFuZ0dyYXBoJTJDRmFzdEFQSSUyQ0lBJTIwZ2VuZXJhdGl2YQ==" data-listing-file-modified-sort="1784512788293" data-listing-reading-time-sort="6" data-listing-word-count-sort="1057">
-<div class="thumbnail"><a href="./proyectos/quotefinder.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./proyectos/quotefinder.html" class="no-external">QuoteFinder</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UkFH'); return false;">RAG</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('T2xsYW1h'); return false;">Ollama</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TGFuZ0dyYXBo'); return false;">LangGraph</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RmFzdEFQSQ=='); return false;">FastAPI</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SUElMjBnZW5lcmF0aXZh'); return false;">IA generativa</div>
-
+    Q[Consulta del usuario] --&gt; I[Retrieval semántico sobre chunks hijo]
+    G --&gt; I
+    I --&gt; J[Expansión de cada match a su chunk padre]
+    H --&gt; J
+    J --&gt; K[FlashRank rerankea usando el hijo coincidente]
+    K --&gt; L[Selección de los mejores contextos padre]
+    L --&gt; M[Modelo local liviano con Ollama]
+    Q --&gt; M
+    M --&gt; N[Citas textuales en Markdown y metadatos de origen]
+</pre>
 </div>
-<div class="delink listing-description"><a href="./proyectos/quotefinder.html" class="no-external">
-<p>Aplicación web para localizar citas textuales en documentos mediante un RAG jerárquico optimizado para modelos locales livianos.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./proyectos/quotefinder.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="UHl0aG9uJTJDSUElMjBnZW5lcmF0aXZhJTJDTGFuZ0dyYXBoJTJDRmFzdEFQSSUyQ0F1dG9tYXRpemFjaSVDMyVCM24=" data-listing-file-modified-sort="1784511532460" data-listing-reading-time-sort="4" data-listing-word-count-sort="786">
-<div class="thumbnail"><a href="./proyectos/wf_cognitivas.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./proyectos/wf_cognitivas.html" class="no-external">Workflow de entrevistas cognitivas</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SUElMjBnZW5lcmF0aXZh'); return false;">IA generativa</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TGFuZ0dyYXBo'); return false;">LangGraph</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RmFzdEFQSQ=='); return false;">FastAPI</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QXV0b21hdGl6YWNpJUMzJUIzbg=='); return false;">Automatización</div>
-
-</div>
-<div class="delink listing-description"><a href="./proyectos/wf_cognitivas.html" class="no-external">
-<p>Aplicación web que utiliza agentes de IA para automatizar la codificación y revisión de entrevistas cognitivas.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./proyectos/wf_cognitivas.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="UiUyQ0F1dG9tYXRpemFjaSVDMyVCM24lMkNEb2N1bWVudGFjaSVDMyVCM24lMkNCb29rZG93bg==" data-listing-date-sort="1656648000000" data-listing-file-modified-sort="1784434756528" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="229">
-<div class="thumbnail"><a href="./proyectos/book_da.html" class="no-external">
-
-<img loading="lazy" src="./images/libro.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./proyectos/book_da.html" class="no-external">Bookdown D&amp;A</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QXV0b21hdGl6YWNpJUMzJUIzbg=='); return false;">Automatización</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RG9jdW1lbnRhY2klQzMlQjNu'); return false;">Documentación</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Qm9va2Rvd24='); return false;">Bookdown</div>
-
-</div>
-<div class="delink listing-description"><a href="./proyectos/book_da.html" class="no-external">
-<p>Libro electrónico con herramientas y automatizaciones en R desarrolladas para Datavoz.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./proyectos/book_da.html" class="no-external">
-<div class="listing-date">
-Jul 1, 2022
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="SW52ZXN0aWdhY2klQzMlQjNuJTJDU29jaW9sb2clQzMlQURhJTJDQ3VhbGl0YXRpdmE=" data-listing-date-sort="1601262000000" data-listing-file-modified-sort="1784431735457" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="83">
-<div class="thumbnail"><a href="./proyectos/sob_alimentaria.html" class="no-external">
-
-<img loading="lazy" src="./images/sob_al.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./proyectos/sob_alimentaria.html" class="no-external">Soberanía alimentaria: los alimentos en el proyecto de la autodeterminación popular</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('SW52ZXN0aWdhY2klQzMlQjNu'); return false;">Investigación</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29jaW9sb2clQzMlQURh'); return false;">Sociología</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q3VhbGl0YXRpdmE='); return false;">Cualitativa</div>
-
-</div>
-<div class="delink listing-description"><a href="./proyectos/sob_alimentaria.html" class="no-external">
-<p>Investigación cualitativa del proyecto Fondecyt N°11180099 (dir. Martín Arboleda). Recoge la perspectiva de organizaciones de base sobre problemas y soluciones en los sistemas agroalimentarios.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./proyectos/sob_alimentaria.html" class="no-external">
-<div class="listing-date">
-Sep 28, 2020
-</div>
-</a>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+<p>La arquitectura separa la preparación del corpus de la ejecución de consultas. Durante la indexación se construye una base vectorial local; durante la búsqueda se recuperan, filtran y reorganizan los fragmentos antes de invocar el modelo generativo.</p>
+<section id="rag-jerárquico-parentchild" class="level3">
+<h3 class="anchored" data-anchor-id="rag-jerárquico-parentchild">RAG jerárquico parent–child</h3>
+<p>La técnica principal consiste en representar cada documento en dos niveles:</p>
+<ul>
+<li>Los <strong>chunks padre</strong> son bloques amplios que conservan suficiente contexto para interpretar y citar correctamente un fragmento. Por defecto utilizan 2.500 caracteres con un solapamiento de 300.</li>
+<li>Los <strong>chunks hijo</strong> son fragmentos más pequeños, de 600 caracteres y 100 de solapamiento por defecto. Estos sí se transforman en embeddings y se almacenan en LanceDB porque permiten una búsqueda semántica más precisa.</li>
+</ul>
+<p>Cada chunk hijo mantiene el identificador de su padre. Cuando la búsqueda encuentra un hijo relevante, QuoteFinder recupera el texto completo del bloque padre desde un almacén local y elimina padres duplicados. Así combina precisión durante la búsqueda con amplitud de contexto durante la generación, sin tener que vectorizar ni enviar documentos completos al modelo.</p>
+</section>
+<section id="retrieval-y-reranking" class="level3">
+<h3 class="anchored" data-anchor-id="retrieval-y-reranking">Retrieval y reranking</h3>
+<p>La consulta se transforma en un embedding con un modelo local de Ollama —<code>bge-m3</code> por defecto— y recupera inicialmente hasta 40 fragmentos hijo desde LanceDB. Después de expandirlos a sus respectivos padres, el sistema aplica FlashRank con <code>ms-marco-TinyBERT-L-2-v2</code>.</p>
+<p>El reranker compara la consulta con el fragmento hijo que originó cada coincidencia, donde se encuentra la señal más precisa, pero conserva como resultado el bloque padre completo. Por defecto solo los cinco contextos mejor posicionados avanzan al modelo final. Este paso funciona como una compresión de contexto: reduce falsos positivos, elimina información redundante y limita la cantidad de tokens que debe procesar el LLM.</p>
+</section>
+<section id="generación-local-de-citas" class="level3">
+<h3 class="anchored" data-anchor-id="generación-local-de-citas">Generación local de citas</h3>
+<p>LangGraph organiza la consulta en tres nodos consecutivos: <code>Retrieve</code>, <code>Rerank</code> y <code>Response</code>. El último nodo utiliza <code>llama3.2:3b</code> mediante Ollama, con temperatura cero, para extraer citas textuales y presentarlas en Markdown. El prompt restringe la salida para evitar explicaciones adicionales y conserva información de procedencia como el archivo fuente y el participante asociado.</p>
+<p>Esta división permite que el modelo liviano no tenga que descubrir por sí solo dónde está la evidencia. Recibe pocos bloques, relevantes y con contexto suficiente, y se dedica principalmente a seleccionar y formatear las citas.</p>
+</section>
+</section>
+<section id="características-principales" class="level2">
+<h2 class="anchored" data-anchor-id="características-principales">Características principales</h2>
+<ul>
+<li>Carga de documentos PDF, DOCX y Markdown desde una interfaz web.</li>
+<li>Conversión y normalización documental con Docling.</li>
+<li>Indexación jerárquica configurable mediante chunks padre e hijo.</li>
+<li>Embeddings y generación ejecutados localmente con modelos disponibles en Ollama.</li>
+<li>Persistencia vectorial local con LanceDB y almacenamiento separado de los bloques padre.</li>
+<li>Reranking eficiente con FlashRank y un modelo TinyBERT almacenado en caché local.</li>
+<li>Configuración desde la interfaz de los tamaños de chunk, cantidad de resultados recuperados, número de contextos finales y modelos utilizados.</li>
+<li>API desarrollada con FastAPI y workflow de consulta modelado con LangGraph.</li>
+<li>Observabilidad opcional de las ejecuciones mediante Phoenix y OpenTelemetry.</li>
+</ul>
+</section>
+<section id="habilidades-que-muestra-este-proyecto" class="level2">
+<h2 class="anchored" data-anchor-id="habilidades-que-muestra-este-proyecto">Habilidades que muestra este proyecto</h2>
+<p>QuoteFinder refleja mi capacidad para diseñar sistemas RAG más allá de la recuperación vectorial básica. El proyecto integra procesamiento documental, chunking jerárquico, embeddings, bases vectoriales, reranking y orquestación de modelos locales en una aplicación web completa. También muestra un enfoque consciente de las restricciones de hardware y contexto, optimizando cada etapa para obtener resultados útiles con modelos pequeños y mantener la trazabilidad de la evidencia recuperada.</p>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -928,11 +851,11 @@ Sep 28, 2020
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Sitio construido con <a href="https://quarto.org"><img src="./images/logo_quarto.png" class="img-fluid" width="65"></a></p>
+<p>Sitio construido con <a href="https://quarto.org"><img src="../images/logo_quarto.png" class="img-fluid" width="65"></a></p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/Jona-S99/Portafolio_qmd/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Jona-S99/Portafolio_qmd/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

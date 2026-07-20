@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Aplicación web que utiliza agentes de IA para automatizar la codificación y revisión de entrevistas cognitivas.">
 
-<title>Proyectos – Jonatan Salazar</title>
+<title>Workflow de entrevistas cognitivas – Jonatan Salazar</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,29 +27,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="././images/logo_portafolio.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-1c07c896eede20a9f05e2a6b9450fb35.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-4b66a41e96f2a42dfe9f81a482d9326b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-1c07c896eede20a9f05e2a6b9450fb35.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href=".././images/logo_portafolio.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-1c07c896eede20a9f05e2a6b9450fb35.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-4b66a41e96f2a42dfe9f81a482d9326b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-1c07c896eede20a9f05e2a6b9450fb35.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -75,68 +74,13 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="styles_dark.css">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../styles_dark.css">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -308,9 +252,9 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="././images/logo_portafolio.png" alt="" class="navbar-logo light-content">
-    <img src="././images/logo_portafolio.png" alt="" class="navbar-logo dark-content">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src=".././images/logo_portafolio.png" alt="" class="navbar-logo light-content">
+    <img src=".././images/logo_portafolio.png" alt="" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -320,11 +264,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Portafolio</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./proyectos.html" aria-current="page"> 
+    <a class="nav-link" href="../proyectos.html"> 
 <span class="menu-text">Proyectos</span></a>
   </li>  
 </ul>
@@ -347,17 +291,44 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="QXV0b21hdGl6YWNpJUMzJUIzbg==">Automatización <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Qm9va2Rvd24=">Bookdown <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q3VhbGl0YXRpdmE=">Cualitativa <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RG9jdW1lbnRhY2klQzMlQjNu">Documentación <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RmFzdEFQSQ==">FastAPI <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SUElMjBnZW5lcmF0aXZh">IA generativa <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SW52ZXN0aWdhY2klQzMlQjNu">Investigación <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TGFuZ0dyYXBo">LangGraph <span class="quarto-category-count">(2)</span></div><div class="category" data-category="T2xsYW1h">Ollama <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHl0aG9u">Python <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UkFH">RAG <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U29jaW9sb2clQzMlQURh">Sociología <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#descripción" id="toc-descripción" class="nav-link active" data-scroll-target="#descripción">Descripción</a></li>
+  <li><a href="#funcionamiento-general" id="toc-funcionamiento-general" class="nav-link" data-scroll-target="#funcionamiento-general">Funcionamiento general</a></li>
+  <li><a href="#arquitectura" id="toc-arquitectura" class="nav-link" data-scroll-target="#arquitectura">Arquitectura</a>
+  <ul class="collapse">
+  <li><a href="#flujo-principal" id="toc-flujo-principal" class="nav-link" data-scroll-target="#flujo-principal">Flujo principal</a></li>
+  <li><a href="#distribución-del-trabajo" id="toc-distribución-del-trabajo" class="nav-link" data-scroll-target="#distribución-del-trabajo">Distribución del trabajo</a></li>
+  <li><a href="#codificación-y-control-de-calidad" id="toc-codificación-y-control-de-calidad" class="nav-link" data-scroll-target="#codificación-y-control-de-calidad">Codificación y control de calidad</a></li>
+  <li><a href="#consolidación-de-resultados" id="toc-consolidación-de-resultados" class="nav-link" data-scroll-target="#consolidación-de-resultados">Consolidación de resultados</a></li>
+  </ul></li>
+  <li><a href="#habilidades-que-muestra-este-proyecto" id="toc-habilidades-que-muestra-este-proyecto" class="nav-link" data-scroll-target="#habilidades-que-muestra-este-proyecto">Habilidades que muestra este proyecto</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/Jona-S99/Portafolio_qmd/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Proyectos</h1>
-</div>
+<h1 class="title">Workflow de entrevistas cognitivas</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Python</div>
+    <div class="quarto-category">IA generativa</div>
+    <div class="quarto-category">LangGraph</div>
+    <div class="quarto-category">FastAPI</div>
+    <div class="quarto-category">Automatización</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    Aplicación web que utiliza agentes de IA para automatizar la codificación y revisión de entrevistas cognitivas.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -372,145 +343,93 @@ window.Quarto = {
 </header>
 
 
+<section id="descripción" class="level2">
+<h2 class="anchored" data-anchor-id="descripción">Descripción</h2>
+<p>Aplicación web desarrollada en Python para apoyar la codificación de entrevistas cognitivas. El sistema recibe transcripciones en formatos PDF, DOC o DOCX, una pauta de preguntas en CSV y el contexto del estudio; luego transforma estos insumos y ejecuta un workflow con agentes de inteligencia artificial para producir una matriz de codificación estructurada.</p>
+<p><a href="https://github.com/Jona-S99/WorkflowCognitivas">Ver el repositorio en GitHub</a></p>
+</section>
+<section id="funcionamiento-general" class="level2">
+<h2 class="anchored" data-anchor-id="funcionamiento-general">Funcionamiento general</h2>
+<ol type="1">
+<li>La persona usuaria carga las transcripciones y la pauta de evaluación desde una interfaz web.</li>
+<li>La aplicación convierte los documentos a Markdown y relaciona su contenido con las preguntas definidas en el archivo CSV.</li>
+<li>Un grafo construido con LangGraph distribuye los bloques de preguntas entre subagentes de codificación.</li>
+<li>Cada resultado pasa por un agente revisor que evalúa su calidad. Si no alcanza el umbral establecido, el bloque vuelve a la etapa de codificación hasta cumplir el criterio o alcanzar el máximo de intentos.</li>
+<li>Un reductor reúne los resultados aprobados y construye la matriz final.</li>
+</ol>
+</section>
+<section id="arquitectura" class="level2">
+<h2 class="anchored" data-anchor-id="arquitectura">Arquitectura</h2>
+<p>El sistema organiza el procesamiento como un grafo de estados compuesto por un flujo principal y un subgrafo reutilizable de codificación. Esta estructura permite separar la preparación de los insumos, distribuir el trabajo entre varios bloques y aplicar el mismo control de calidad a cada resultado antes de consolidarlo.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Usuario carga documentos y CSV] --&gt; B[FastAPI recibe los archivos]
+    B --&gt; C[Convierte transcripciones a Markdown]
+    C --&gt; D[Extrae bloques de preguntas desde Markdown + CSV]
+    D --&gt; E[fanout_a_subagente]
+    E --&gt; F1[Send bloque 1]
+    E --&gt; F2[Send bloque 2]
+    E --&gt; F3[Send bloque N]
 
+    subgraph S[Subgrafo de codificación por bloque]
+        F1 --&gt; G1[Codificación cognitiva]
+        G1 --&gt; H1[Revisión de codificación]
+        H1 --&gt; I1{Score &gt;= umbral?}
+        I1 -- No, reintento --&gt; G1
+        I1 -- Sí o máximo intentos --&gt; J1[matriz_final]
 
+        F2 --&gt; G2[Codificación cognitiva]
+        G2 --&gt; H2[Revisión de codificación]
+        H2 --&gt; I2{Score &gt;= umbral?}
+        I2 -- No, reintento --&gt; G2
+        I2 -- Sí o máximo intentos --&gt; J2[matriz_final]
 
+        F3 --&gt; G3[Codificación cognitiva]
+        G3 --&gt; H3[Revisión de codificación]
+        H3 --&gt; I3{Score &gt;= umbral?}
+        I3 -- No, reintento --&gt; G3
+        I3 -- Sí o máximo intentos --&gt; J3[matriz_final]
+    end
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="UHl0aG9uJTJDUkFHJTJDT2xsYW1hJTJDTGFuZ0dyYXBoJTJDRmFzdEFQSSUyQ0lBJTIwZ2VuZXJhdGl2YQ==" data-listing-file-modified-sort="1784512788293" data-listing-reading-time-sort="6" data-listing-word-count-sort="1057">
-<div class="thumbnail"><a href="./proyectos/quotefinder.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./proyectos/quotefinder.html" class="no-external">QuoteFinder</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UkFH'); return false;">RAG</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('T2xsYW1h'); return false;">Ollama</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TGFuZ0dyYXBo'); return false;">LangGraph</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RmFzdEFQSQ=='); return false;">FastAPI</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SUElMjBnZW5lcmF0aXZh'); return false;">IA generativa</div>
-
+    J1 --&gt; K[Reducer principal]
+    J2 --&gt; K
+    J3 --&gt; K
+    K --&gt; L[Respuesta final y estado de la ejecución]
+</pre>
 </div>
-<div class="delink listing-description"><a href="./proyectos/quotefinder.html" class="no-external">
-<p>Aplicación web para localizar citas textuales en documentos mediante un RAG jerárquico optimizado para modelos locales livianos.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./proyectos/quotefinder.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="UHl0aG9uJTJDSUElMjBnZW5lcmF0aXZhJTJDTGFuZ0dyYXBoJTJDRmFzdEFQSSUyQ0F1dG9tYXRpemFjaSVDMyVCM24=" data-listing-file-modified-sort="1784511532460" data-listing-reading-time-sort="4" data-listing-word-count-sort="786">
-<div class="thumbnail"><a href="./proyectos/wf_cognitivas.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./proyectos/wf_cognitivas.html" class="no-external">Workflow de entrevistas cognitivas</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SUElMjBnZW5lcmF0aXZh'); return false;">IA generativa</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TGFuZ0dyYXBo'); return false;">LangGraph</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RmFzdEFQSQ=='); return false;">FastAPI</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QXV0b21hdGl6YWNpJUMzJUIzbg=='); return false;">Automatización</div>
-
-</div>
-<div class="delink listing-description"><a href="./proyectos/wf_cognitivas.html" class="no-external">
-<p>Aplicación web que utiliza agentes de IA para automatizar la codificación y revisión de entrevistas cognitivas.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./proyectos/wf_cognitivas.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="UiUyQ0F1dG9tYXRpemFjaSVDMyVCM24lMkNEb2N1bWVudGFjaSVDMyVCM24lMkNCb29rZG93bg==" data-listing-date-sort="1656648000000" data-listing-file-modified-sort="1784434756528" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="229">
-<div class="thumbnail"><a href="./proyectos/book_da.html" class="no-external">
-
-<img loading="lazy" src="./images/libro.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./proyectos/book_da.html" class="no-external">Bookdown D&amp;A</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QXV0b21hdGl6YWNpJUMzJUIzbg=='); return false;">Automatización</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RG9jdW1lbnRhY2klQzMlQjNu'); return false;">Documentación</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Qm9va2Rvd24='); return false;">Bookdown</div>
-
-</div>
-<div class="delink listing-description"><a href="./proyectos/book_da.html" class="no-external">
-<p>Libro electrónico con herramientas y automatizaciones en R desarrolladas para Datavoz.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./proyectos/book_da.html" class="no-external">
-<div class="listing-date">
-Jul 1, 2022
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="SW52ZXN0aWdhY2klQzMlQjNuJTJDU29jaW9sb2clQzMlQURhJTJDQ3VhbGl0YXRpdmE=" data-listing-date-sort="1601262000000" data-listing-file-modified-sort="1784431735457" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="83">
-<div class="thumbnail"><a href="./proyectos/sob_alimentaria.html" class="no-external">
-
-<img loading="lazy" src="./images/sob_al.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./proyectos/sob_alimentaria.html" class="no-external">Soberanía alimentaria: los alimentos en el proyecto de la autodeterminación popular</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('SW52ZXN0aWdhY2klQzMlQjNu'); return false;">Investigación</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29jaW9sb2clQzMlQURh'); return false;">Sociología</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q3VhbGl0YXRpdmE='); return false;">Cualitativa</div>
-
-</div>
-<div class="delink listing-description"><a href="./proyectos/sob_alimentaria.html" class="no-external">
-<p>Investigación cualitativa del proyecto Fondecyt N°11180099 (dir. Martín Arboleda). Recoge la perspectiva de organizaciones de base sobre problemas y soluciones en los sistemas agroalimentarios.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./proyectos/sob_alimentaria.html" class="no-external">
-<div class="listing-date">
-Sep 28, 2020
-</div>
-</a>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+<section id="flujo-principal" class="level3">
+<h3 class="anchored" data-anchor-id="flujo-principal">Flujo principal</h3>
+<p>FastAPI recibe las transcripciones y la pauta CSV cargadas por la persona usuaria. Las transcripciones se convierten a Markdown para normalizar el contenido y facilitar su procesamiento. A continuación, el sistema combina los documentos con la pauta y extrae bloques de preguntas que pueden analizarse de forma independiente.</p>
+</section>
+<section id="distribución-del-trabajo" class="level3">
+<h3 class="anchored" data-anchor-id="distribución-del-trabajo">Distribución del trabajo</h3>
+<p>El nodo <code>fanout_a_subagente</code> distribuye los bloques mediante operaciones <code>Send</code> de LangGraph. Cada bloque ingresa al mismo subgrafo de codificación, lo que permite procesar una cantidad variable de preguntas sin duplicar la lógica del workflow. Esta arquitectura de <em>fan-out</em> facilita además la ejecución paralela de tareas independientes.</p>
+</section>
+<section id="codificación-y-control-de-calidad" class="level3">
+<h3 class="anchored" data-anchor-id="codificación-y-control-de-calidad">Codificación y control de calidad</h3>
+<p>Dentro del subgrafo, un agente realiza la codificación cognitiva y otro revisa el resultado. La revisión produce un puntaje que se compara con un umbral de calidad. Si la codificación no alcanza ese valor, regresa al agente codificador para un nuevo intento; si lo alcanza, o se llega al máximo de intentos permitido, el bloque se incorpora a <code>matriz_final</code>. Este ciclo introduce una instancia explícita de evaluación y limita los reintentos para evitar ejecuciones indefinidas.</p>
+</section>
+<section id="consolidación-de-resultados" class="level3">
+<h3 class="anchored" data-anchor-id="consolidación-de-resultados">Consolidación de resultados</h3>
+<p>Cuando terminan los distintos bloques, el reducer principal reúne sus matrices parciales en una única salida. Finalmente, la aplicación devuelve la matriz consolidada junto con el estado de la ejecución, que puede consultarse desde la interfaz web o mediante la API.</p>
+</section>
+</section>
+<section id="habilidades-que-muestra-este-proyecto" class="level2">
+<h2 class="anchored" data-anchor-id="habilidades-que-muestra-este-proyecto">Habilidades que muestra este proyecto</h2>
+<p>Este proyecto refleja mi capacidad para traducir un proceso metodológico especializado en un flujo de software reproducible, integrar modelos de lenguaje en una aplicación web y diseñar arquitecturas con agentes que incorporan paralelización, evaluación automática y mecanismos de control de calidad. También muestra experiencia en desarrollo backend con Python, modelado de workflows con LangGraph y construcción de interfaces orientadas a personas usuarias.</p>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -928,11 +847,11 @@ Sep 28, 2020
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Sitio construido con <a href="https://quarto.org"><img src="./images/logo_quarto.png" class="img-fluid" width="65"></a></p>
+<p>Sitio construido con <a href="https://quarto.org"><img src="../images/logo_quarto.png" class="img-fluid" width="65"></a></p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/Jona-S99/Portafolio_qmd/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Jona-S99/Portafolio_qmd/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

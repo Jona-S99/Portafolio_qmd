@@ -2,6 +2,8 @@
   {
     "listing": "/proyectos.html",
     "items": [
+      "/proyectos/quotefinder.html",
+      "/proyectos/wf_cognitivas.html",
       "/proyectos/book_da.html",
       "/proyectos/sob_alimentaria.html"
     ]
